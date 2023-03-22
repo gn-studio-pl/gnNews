@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+
+p {
+  font-size: 40px;
+
+  span {
+    font-size: 48px;
+    font-weight: 700;
+    color: $c-purple;
+  }
+}

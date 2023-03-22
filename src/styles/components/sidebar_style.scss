@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+aside {
+  height: 90%;
+  width: 270px;
+  border-right: 1px solid $c-purple;
+
+  display: flex;
+
+  a {
+    height: 50px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: $c-dark;
+
+    &:hover {
+      border: 1px solid $c-purple;
+    }
+
+    &:active {
+      background-color: $c-purple;
+      color: $c-white;
+    }
+  }
+}

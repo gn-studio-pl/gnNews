@@ -1,0 +1,26 @@
+.side-nav {
+  background-color: #454545;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  padding-top: 8rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  min-width: 250px;
+}
+
+.side-nav ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav ul a {
+  text-decoration: none;
+}
+
+.side-nav ul a.active li {
+  text-decoration: none;
+  color: #b8f322;
+}

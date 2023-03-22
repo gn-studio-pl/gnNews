@@ -1,0 +1,13 @@
+li {
+  color: white;
+}
+
+li:hover {
+  color: #a3cf34;
+  cursor: pointer;
+}
+
+li span {
+  padding: 0.4rem 0;
+  margin-right: 1rem;
+}

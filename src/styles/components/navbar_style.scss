@@ -5,8 +5,11 @@ nav {
   height: 120px;
   display: flex;
   border-bottom: 1px solid $c-grey;
+  background-color: $c-white;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 
   div {
     display: flex;

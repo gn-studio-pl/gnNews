@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.card {
+  @include button_a_with_shadow(170px);
+  width: 200px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}

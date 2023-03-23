@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "../../styles/components/UI/logo_style.scss";
 
 export const Logo = () => {
+  const navigate = useNavigate();
   return (
-    <p>
+    <button className="logo" onClick={() => navigate("/")}>
       gn<span>News</span>
-    </p>
+    </button>
   );
 };

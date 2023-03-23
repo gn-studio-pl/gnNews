@@ -2,7 +2,7 @@ import "../styles/components/footer_style.scss";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <p>
         created by <a href="https://github.com/annakoruc">annakoruc</a> |
         recruitment task <a href="https://www.gnstudio.dev/">gnStudio</a>

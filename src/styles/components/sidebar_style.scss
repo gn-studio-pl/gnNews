@@ -1,11 +1,14 @@
 @import "../variables.scss";
 
 aside {
-  height: 90%;
+  height: 100%;
+  height: calc(100vh - 120px - 60px - 120px);
   width: 270px;
   border-right: 1px solid $c-purple;
 
   display: flex;
+  position: sticky;
+  top: 60px;
 
   a {
     height: 50px;
@@ -25,7 +28,7 @@ aside {
       border: 1px solid $c-purple;
     }
 
-    &:active {
+    &.active {
       background-color: $c-purple;
       color: $c-white;
     }

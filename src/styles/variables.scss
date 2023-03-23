@@ -7,3 +7,22 @@ $c-white: #ffffff;
 //fonts
 
 $font: "Raleway", sans-serif;
+
+//mixin
+
+@mixin button_a_with_shadow($height) {
+  height: $height;
+  background-color: $c-white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px rgba(157, 157, 157, 0.25);
+
+  font-family: $font;
+  text-align: center;
+  padding: 0 15px;
+
+  &:hover {
+    box-shadow: 0px 0px 6px #8b6af3;
+    cursor: pointer;
+  }
+}

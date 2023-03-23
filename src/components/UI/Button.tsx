@@ -5,5 +5,5 @@ type props = {
 };
 
 export const Button = ({ children }: props) => {
-  return <button>{children}</button>;
+  return <button className="styled_button">{children}</button>;
 };

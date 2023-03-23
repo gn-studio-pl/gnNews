@@ -1,13 +1,5 @@
 @import "../../variables.scss";
 
-button {
-  height: 35px;
-  background-color: $c-white;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0px 0px 6px rgba(157, 157, 157, 0.25);
-
-  font-family: $font;
-  text-align: center;
-  padding: 0 15px;
+.styled_button {
+  @include button_a_with_shadow(35px);
 }

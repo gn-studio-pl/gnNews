@@ -1,7 +1,10 @@
 @import "../../variables.scss";
 
-p {
+.logo {
   font-size: 40px;
+  background: $c-white;
+  border: none;
+  cursor: pointer;
 
   span {
     font-size: 48px;

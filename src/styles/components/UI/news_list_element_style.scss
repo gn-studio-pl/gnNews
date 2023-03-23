@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.element {
+  @include button_a_with_shadow(50px);
+  width: 100%;
+  padding: 0 25px;
+
+  display: grid;
+  grid-template-areas: "title author date";
+  grid-template-columns: auto 200px 200px;
+  align-items: center;
+  justify-items: flex-start;
+
+  .title {
+    grid-area: title;
+    font-weight: 700;
+  }
+
+  .author {
+    grid-area: author;
+    color: $c-purple;
+  }
+
+  .date {
+    grid-area: date;
+    justify-self: flex-end;
+  }
+}

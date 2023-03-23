@@ -1,12 +1,15 @@
-import { Sidebar } from "../components";
+import { Container } from "../components";
+import { NewsCard, NewsListElement } from "../components/UI";
 
 import "../styles/pages/country_news.scss";
 
 export const CountryNews = () => {
   return (
-    <div className="layout">
-      <Sidebar />
-      <div>CountryNews</div>
-    </div>
+    <Container>
+      <div className="all-news">
+        <NewsListElement />
+        <NewsCard />
+      </div>
+    </Container>
   );
 };

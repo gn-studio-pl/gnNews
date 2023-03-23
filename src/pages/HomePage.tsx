@@ -1,10 +1,5 @@
-import { Sidebar } from "../components";
+import { Container } from "../components";
 
 export const HomePage = () => {
-  return (
-    <div>
-      <Sidebar />
-      HomePage
-    </div>
-  );
+  return <Container>HomePage</Container>;
 };

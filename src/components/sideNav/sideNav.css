@@ -1,9 +1,11 @@
 .side-nav {
   background-color: #454545;
   position: absolute;
-  height: 100vh;
+  height: 85%;
   left: 0;
-  padding-top: 8rem;
+  top: 8%;
+  bottom: 7%;
+  padding-top: 2rem;
   padding-right: 2rem;
   padding-left: 2rem;
   min-width: 250px;

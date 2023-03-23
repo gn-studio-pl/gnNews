@@ -10,7 +10,8 @@ const CountryRoute = ({ country, flag }: CountryRouteProps) => {
   const className = `fi fi-${flag}`;
   return (
     <li>
-      <span className={className}></span> {country}
+      <span className={className}></span>
+      {country}
     </li>
   );
 };

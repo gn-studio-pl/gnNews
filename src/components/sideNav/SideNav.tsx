@@ -8,20 +8,20 @@ export const SideNav = () => {
   return (
     <nav className="side-nav">
       <ul>
-        <NavLink to="/country/poland">
-          <CountryRoute country="Poland" flag="pl" />
+        <NavLink to="/country/pl">
+          <CountryRoute country="poland" flag="pl" />
         </NavLink>
-        <NavLink to="/country/argentina">
-          <CountryRoute country="Argentina" flag="ar" />
+        <NavLink to="/country/ar">
+          <CountryRoute country="argentina" flag="ar" />
         </NavLink>
-        <NavLink to="/country/belgium">
-          <CountryRoute country="Belgium" flag="be" />
+        <NavLink to="/country/be">
+          <CountryRoute country="belgium" flag="be" />
         </NavLink>
-        <NavLink to="/country/canada">
-          <CountryRoute country="Canada" flag="ca" />
+        <NavLink to="/country/ca">
+          <CountryRoute country="canada" flag="ca" />
         </NavLink>
-        <NavLink to="/country/japan">
-          <CountryRoute country="Japan" flag="jp" />
+        <NavLink to="/country/jp">
+          <CountryRoute country="japan" flag="jp" />
         </NavLink>
       </ul>
     </nav>

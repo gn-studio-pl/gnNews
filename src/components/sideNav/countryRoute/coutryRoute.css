@@ -1,5 +1,6 @@
 li {
   color: white;
+  text-transform: capitalize;
 }
 
 li:hover {
@@ -9,5 +10,5 @@ li:hover {
 
 li span {
   padding: 0.4rem 0;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
 }

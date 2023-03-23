@@ -1,10 +1,20 @@
 .main-content {
   padding-left: 250px;
+  max-height: 85%;
+  overflow-y: scroll;
 }
 
 .main-content h2 {
   padding-left: 2rem;
   padding-top: 1rem;
+  color: gray;
+  font-weight: 400;
+}
+
+.main-content h2 span {
+  text-transform: capitalize;
+  color: rgb(80, 80, 80);
+  font-weight: 600;
 }
 
 .news-layout-list {
@@ -13,8 +23,9 @@
   gap: 1rem;
 }
 
-/* .news-layout-tiles {
+.news-layout-tiles {
   padding: 1rem 2rem 2rem 2rem;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
-} */
+}

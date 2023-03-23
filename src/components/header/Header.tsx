@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 import { Modal } from "./modal/Modal";
 
@@ -7,9 +8,11 @@ export const Header = () => {
 
   return (
     <header className="header">
-      <h1>
-        gn<span>News</span>
-      </h1>
+      <Link to="/">
+        <h1>
+          gn<span>News</span>
+        </h1>
+      </Link>
       <div className="nav-btns">
         <button>LIST / TILES</button>
         <button onClick={() => setIsOpen(true)}>Popup</button>

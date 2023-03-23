@@ -26,6 +26,10 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

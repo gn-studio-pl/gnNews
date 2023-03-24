@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Content = () => {
-  return <div>Content</div>
+  return <div className="page-content">Content</div>
 }
 
 export default Content

@@ -23,6 +23,21 @@ export const SideNav = () => {
         <NavLink to="/country/jp">
           <CountryRoute country="japan" flag="jp" />
         </NavLink>
+        <NavLink to="/country/gr">
+          <CountryRoute country="greece" flag="gr" />
+        </NavLink>
+        <NavLink to="/country/cz">
+          <CountryRoute country="czech rp." flag="cz" />
+        </NavLink>
+        <NavLink to="/country/lv">
+          <CountryRoute country="latvia" flag="lv" />
+        </NavLink>
+        <NavLink to="/country/se">
+          <CountryRoute country="sweden" flag="se" />
+        </NavLink>
+        <NavLink to="/country/tr">
+          <CountryRoute country="turkey" flag="tr" />
+        </NavLink>
       </ul>
     </nav>
   );

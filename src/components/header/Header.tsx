@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./header.css";
+import { useAppDispatch } from "../../app/hooks";
+import { getValue } from "../../features/newsCounter/newsCounter";
+import { NewsLayoutBtn } from "../../features/newsLayout/NewsLayoutBtn";
 import { Modal } from "./modal/Modal";
+import "./header.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useAppDispatch();
 
   return (
     <header className="header">
-      <Link to="/">
+      <Link onClick={() => dispatch(getValue(0))} to="/">
         <h1>
           gn<span>News</span>
         </h1>
       </Link>
       <div className="nav-btns">
-        <button>LIST / TILES</button>
+        <NewsLayoutBtn />
         <button onClick={() => setIsOpen(true)}>Popup</button>
         <Modal open={isOpen} onClose={() => setIsOpen(false)} />
       </div>

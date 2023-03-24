@@ -12,13 +12,12 @@ import { RootLayout } from "./layouts/RootLayout";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route path="/" element={<Main />} loader={newsLoader}>
-        <Route
-          path="country/:country"
-          element={<Main />}
-          errorElement={<NewsError />}
-        />
-      </Route>
+      <Route
+        path="/country/:country"
+        element={<Main />}
+        loader={newsLoader}
+        errorElement={<NewsError />}
+      />
     </Route>
   )
 );

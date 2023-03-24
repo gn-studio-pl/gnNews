@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { getValue } from "../../features/newsCounter/newsCounter";
 import { Card } from "./card/Card";
 import "./main.css";
 
@@ -18,30 +20,28 @@ export interface Article {
 }
 
 export const Main = () => {
-  const { country } = useParams();
-
   const news = useLoaderData() as Article[];
+  const newsLayoutState = useAppSelector(
+    (state) => state.newsLayout.newsLayoutState
+  );
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getValue(news.length));
+  }, []);
 
   return (
     <main className="main-content">
-      <h2>
-        {country ? (
-          <div>Latest news</div>
-        ) : (
-          <div>
-            Click on links to check for latest news from selected countries
-          </div>
-        )}
-      </h2>
-      {country && (
-        <div className="news-layout-list">
-          {news.map((article, id) => (
-            <div key={id}>
-              <Card article={article} />
-            </div>
-          ))}
-        </div>
-      )}
+      <h2>Latest news</h2>
+      <div
+        className={
+          newsLayoutState === "list" ? "news-layout-list" : "news-layout-tiles"
+        }
+      >
+        {news.map((article, id) => (
+          <Card key={id} article={article} />
+        ))}
+      </div>
     </main>
   );
 };
@@ -54,11 +54,11 @@ export const newsLoader = async ({ params }: any) => {
     }`
   );
 
-  if (!res.ok) {
+  const data = await res.json();
+  if (data.articles.length === 0) {
     throw Error("Could not find news for this country");
   }
 
-  const data = await res.json();
   const news = data.articles;
 
   return news;

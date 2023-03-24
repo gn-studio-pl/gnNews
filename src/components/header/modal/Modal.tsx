@@ -12,7 +12,8 @@ export const Modal = ({ open, onClose }: ModalProps) => {
   return (
     <div className="overlay">
       <div className="modal">
-        <p>noting special so far</p>
+        <p>Worst: setting up redux 😆</p>
+        <p>Best: I generally like tinkering with css</p>
         <button onClick={onClose}>CLOSE</button>
       </div>
     </div>

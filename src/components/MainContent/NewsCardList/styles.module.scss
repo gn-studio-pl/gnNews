@@ -1,0 +1,16 @@
+.newsViewTiles{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.newsViewList{
+  max-width: 1000px;
+  margin: 0 auto;
+  div{
+    margin-bottom: 1rem;
+  }
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  // gap: 1rem;
+}

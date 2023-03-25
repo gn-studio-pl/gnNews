@@ -1,19 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
+import { TILES_VIEW } from 'constants/index';
 
 const newsViewSlice = createSlice({
-	name: 'newsView',
-	initialState: {
-		view: 'tiles',
-	},
-	reducers: {
-		switchToTileView: (state) => {
-      state.view = 'tiles'
+  name: 'newsView',
+  initialState: {
+    view: TILES_VIEW,
+  },
+  reducers: {
+    changeView: (state, action) => {
+      state.view = action.payload;
     },
-    switchToListView: (state) => {
-      state.view = 'list'
-    },
-	},
+  },
 });
 
+export const { changeView } = newsViewSlice.actions;
 export default newsViewSlice.reducer;
-export const { switchToTileView, switchToListView } = newsViewSlice.actions;

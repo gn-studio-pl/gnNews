@@ -1,19 +1,14 @@
 import React from 'react';
 import styles from './styles.module.scss';
-
 interface ButtonProps {
-  title?: string;
+  title: string;
   onClick: () => void;
-  icon?: JSX.Element;
-  active?: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({ title, icon, active, onClick }) => {
-
-  console.log(active)
+const Button: React.FC<ButtonProps> = ({ title, onClick }) => {
   return (
-    <button title={title} onClick={onClick} className={`${styles.button} ${active && styles.active}`}>
-     <span>{icon}</span>
+    <button onClick={onClick} className={`${styles.button}`}>
+      <span>{title}</span>
     </button>
   );
 };

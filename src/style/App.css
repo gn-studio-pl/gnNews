@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  box-sizing: border-box;
+}
+.sidebar-arrow {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 40%;
+}
+.sidebar-arrow:hover {
+  cursor: pointer;
+}
+.d-none {
+  display: none;
+}

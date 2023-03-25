@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import '../src/style/App.css';
+
 import Header from './components/Header';
-import { Button, Offcanvas, OffcanvasHeader, OffcanvasBody } from 'reactstrap';
+import SideBar from './components/SideBar/SideBar';
+import NewsContainer from './modules/NewsContainer';
+import SideBarArrow from './components/SideBar/SideBarArrow';
+import useSingleNews from './modules/SingleNews.tsx/useSingleNews';
 
 function App() {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const { data } = useSingleNews();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <div>
       <Header />
-      <div>
-        <Button color="primary" onClick={() => setToggle(!toggle)}>
-          Open
-        </Button>
-        <Offcanvas isOpen={toggle} toggle={() => setToggle(!toggle)}>
-          <OffcanvasHeader toggle={() => setToggle(!toggle)}>Offcanvas</OffcanvasHeader>
-          <OffcanvasBody>
-            <strong>This is the Offcanvas body.</strong>
-          </OffcanvasBody>
-        </Offcanvas>
-      </div>
+      <SideBarArrow toggle={toggle} />
+      <SideBar toggle={toggle} isOpen={isOpen} />
+      <NewsContainer data={data} />
     </div>
   );
 }

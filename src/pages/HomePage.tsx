@@ -5,6 +5,7 @@ import SideMenu from 'components/Sidebar/Sidebar';
 import MainContent from 'components/MainContent/MainContent';
 import Footer from 'components/Footer/Footer';
 import styles from './styles.module.scss';
+import Popup from 'components/Popup/Popup';
 const HomePage: React.FC = () => {
   const { data: allNews, error, isLoading } = useGetAllNewsQuery();
   const { data: countryNews } = useGetCountryNewsQuery('pl');
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => {
         <MainContent />
       </main>
       <Footer />
+      <Popup><div>wszystko gra</div></Popup>
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {newsApi} from './newsApi'
 import newsViewSlice from './newsView';
+import popupViewSlice from './popupView';
 
 export const store = configureStore({
   reducer: {
     [newsApi.reducerPath]: newsApi.reducer,
-    newsView: newsViewSlice
+    newsView: newsViewSlice,
+    popupView: popupViewSlice
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(

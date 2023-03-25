@@ -1,0 +1,11 @@
+.button{
+  padding: .3rem .6rem;
+  margin: .5rem;
+  &.active{
+    background-color: rgb(220, 220, 220);
+  }
+}
+
+.titleSpan {
+  margin: 0 0.5rem;
+}

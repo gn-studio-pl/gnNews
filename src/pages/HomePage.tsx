@@ -1,18 +1,21 @@
-import { useGetAllNewsQuery, useGetCountryNewsQuery } from '../store/newsApi'
-import Header from 'containers/Header/Header'
-import SideMenu from 'containers/Sidebar/Sidebar'
-import MainContent from 'containers/MainContent/MainContent'
-import Footer from 'containers/Footer/Footer'
+import { useGetAllNewsQuery, useGetCountryNewsQuery } from '../store/newsApi';
+import {useState} from 'react'
+import Header from 'components/Header/Header';
+import SideMenu from 'components/Sidebar/Sidebar';
+import MainContent from 'components/MainContent/MainContent';
+import Footer from 'components/Footer/Footer';
+import styles from './styles.module.scss';
+const HomePage: React.FC = () => {
+  const { data: allNews, error, isLoading } = useGetAllNewsQuery();
+  const { data: countryNews } = useGetCountryNewsQuery('pl');
+  const [view, setView] = useState()
 
-const HomePage:React.FC = () => {
-  const { data: allNews, error, isLoading } = useGetAllNewsQuery()
-  const { data: countryNews } = useGetCountryNewsQuery('pl')
 
-  console.log(allNews)
-  console.log(countryNews)
+  console.log(allNews);
+  console.log(countryNews);
 
   return (
-    <div>
+    <div className={styles.homePage}>
       <Header />
       <main>
         <SideMenu />
@@ -20,7 +23,7 @@ const HomePage:React.FC = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

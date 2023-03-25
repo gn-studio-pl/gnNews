@@ -1,13 +1,15 @@
-import { Provider } from 'react-redux'
-import { store } from 'store/store'
-import HomePage from 'pages/HomePage'
+import AppProviders from './providers/AppProviders';
+import AppRoutes from './routes/Routes';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <Provider store={store}>
-      <HomePage />
-    </Provider>
-  )
+    <BrowserRouter>
+      <AppProviders>
+        <AppRoutes />
+      </AppProviders>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

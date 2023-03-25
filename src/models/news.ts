@@ -5,10 +5,10 @@ export interface NewsApiResponse {
 }
 
 export interface News {
-  author: string | null;
+  author?: string | null;
   content?: null;
   description?: string | null;
-  title?: string;
+  title: string;
   url?: string;
   urlToImage?: string | null;
   publishedAt?: Date;
@@ -16,6 +16,6 @@ export interface News {
 }
 
 export interface Source {
-  id: string | null;
+  id: string  | null;
   name: string;
 }

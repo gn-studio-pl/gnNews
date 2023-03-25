@@ -5,12 +5,10 @@
 }
 
 .newsViewList{
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
-  div{
+  & > *{
     margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  // gap: 1rem;
 }

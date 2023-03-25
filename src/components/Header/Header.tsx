@@ -1,5 +1,5 @@
 import { changeView } from 'store/newsView';
-import { popupView } from 'store/popupView';
+import { mainPopupView } from 'store/popupView';
 import styles from './styles.module.scss';
 import { TILES_VIEW, LIST_VIEW } from 'constants/index';
 import IconButton from 'components/common/IconButton/IconButton';
@@ -20,8 +20,8 @@ const Header: React.FC = () => {
     dispatch(changeView(TILES_VIEW));
   };
 
-  const handleOpenPopup = () => {
-    dispatch(popupView(true));
+  const handleOpenMainPopup = () => {
+    dispatch(mainPopupView(true));
   }
 
   return (
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           icon={<MdViewModule fontSize={'1.5rem'} />}
           active={view === TILES_VIEW && true}
         />
-      <Button title={'Popup'} onClick={handleOpenPopup}/>
+      <Button title={'Popup'} onClick={handleOpenMainPopup}/>
       </div>
     </header>
   );

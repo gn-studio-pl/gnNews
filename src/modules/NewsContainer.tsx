@@ -3,7 +3,7 @@ import SingleNews from './SingleNews.tsx/SingleNews';
 
 const NewsContainer = ({ data }: any) => {
   return (
-    <div className="mt-2 container border border-primary">
+    <div className="mt-2 container">
       <SingleNews data={data} />
     </div>
   );

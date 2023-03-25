@@ -24,15 +24,12 @@ const SingleNews = ({ data }: any) => {
     return (
       data &&
       data.map((el: any) => {
-        const mediaUrl = el.media;
-        console.log(el && el.media);
+        const mediaUrl = el.urlToImage;
+        console.log(mediaUrl);
         return (
-          <div className="d-flex flex-column m-2 border border-dark" style={{ width: 300 }}>
-            {mediaUrl && mediaUrl.startsWith('http') ? (
-              <img src={mediaUrl} alt="media-test" className="img-fluid" />
-            ) : (
-              <img src="'../../images/logo.jpg';" alt="media" className="img-fluid" />
-            )}
+          <div className="d-flex flex-column m-2 border border-dark" style={{ width: 200 }}>
+            <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="media" className="img-fluid" />
+
             <p>{el.title}</p>
           </div>
         );
@@ -41,7 +38,7 @@ const SingleNews = ({ data }: any) => {
   };
 
   return reduxFunctionality ? (
-    <div className="container d-flex flex-wrap">{tileContent()}</div>
+    <div className="container d-flex justify-content-center flex-wrap">{tileContent()}</div>
   ) : (
     <ul className="list-group">{listContent()}</ul>
   );

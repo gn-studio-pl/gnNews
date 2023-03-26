@@ -12,7 +12,7 @@ import { TILES_VIEW, LIST_VIEW } from 'constants/index';
 import styles from './styles.module.scss';
 
 const Header: React.FC = () => {
-  const view = useSelector((state: RootState) => state.newsView.view);
+  const viewStyles = useSelector((state: RootState) => state.newsView.view);
   const dispatch = useDispatch();
 
   const handleListView = () => {
@@ -36,13 +36,13 @@ const Header: React.FC = () => {
             onClick={handleTilesView}
             title={TILES_VIEW}
             icon={<MdViewModule fontSize={'1.5rem'} />}
-            active={view === TILES_VIEW && true}
+            active={viewStyles === TILES_VIEW && true}
           />
           <IconButton
             onClick={handleListView}
             title={LIST_VIEW}
             icon={<MdViewList fontSize={'1.5rem'} />}
-            active={view === LIST_VIEW && true}
+            active={viewStyles === LIST_VIEW && true}
           />
         </div>
         <Button title={'Popup'} onClick={handleOpenMainPopup} />

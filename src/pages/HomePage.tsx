@@ -5,6 +5,7 @@ import Footer from 'components/Footer/Footer';
 import MainPopup from 'components/MainPopup/MainPopup';
 import styles from './styles.module.scss';
 
+
 const HomePage: React.FC = () => {
   return (
     <div className={styles.homePage}>

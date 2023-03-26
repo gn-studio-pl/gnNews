@@ -3,10 +3,10 @@ import HomePage from 'pages/HomePage';
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/country/:id' element={<HomePage />} />
-    </Routes>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/country/:id' element={<HomePage />} />
+      </Routes>
   );
 };
 

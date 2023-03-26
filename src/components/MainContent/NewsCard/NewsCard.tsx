@@ -3,7 +3,7 @@ import { News } from 'models/news';
 import styles from './styles.module.scss';
 import {SUBSTITUTE_IMAGE} from 'constants/index'
 
-interface NewsCardProps extends News {
+export interface NewsCardProps extends News {
   onClick: () => void;
 }
 

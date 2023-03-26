@@ -1,8 +1,8 @@
-import AppProviders from './providers/AppProviders';
-import AppRoutes from './routes/Routes';
 import { BrowserRouter } from 'react-router-dom';
+import AppProviders from 'providers/AppProviders';
+import AppRoutes from 'routes/Routes';
 
-function App() {
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <AppProviders>
@@ -10,6 +10,6 @@ function App() {
       </AppProviders>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

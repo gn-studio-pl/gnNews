@@ -6,6 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppProviders>
+        <h1>Hello</h1>
         <AppRoutes />
       </AppProviders>
     </BrowserRouter>

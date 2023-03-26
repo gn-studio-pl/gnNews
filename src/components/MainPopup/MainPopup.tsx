@@ -19,9 +19,9 @@ const MainPopup: React.FC = () => {
           <div className={styles.contentPopup}>
             <h2>Difficulties</h2>
             <p>
-              The most difficult aspect of the task was completing the application within the recommended 12-hour
-              timeframe, which turned out to be too short to refine details such as selecting appropriate fonts and
-              icons, and so on.
+              The most challenging aspect of the task was completing the application within the recommended 12-hour time
+              frame, which proved too short for me to finish the tests and add the ability to change the language of the
+              application.
             </p>
             <h2>The greatest joy</h2>
             <p>

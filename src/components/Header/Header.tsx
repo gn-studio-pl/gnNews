@@ -29,9 +29,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <Link to={`/`}>
-        <h1>gnNews</h1>{' '}
-      </Link>
+      <Link to={`/`} id={styles.logo}>gnNews</Link>
       <div className={styles.headerActions}>
         <div className={styles.switches}>
           <IconButton

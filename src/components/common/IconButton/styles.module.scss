@@ -1,0 +1,21 @@
+@import 'styles/colors.scss';
+
+.iconButton {
+  padding: 0.3rem 0.6rem;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid $primary-gray;
+  background-color: $tertiary-gray;
+  span {
+    margin: 0 0.5rem;
+  }
+  &:hover {
+    background-color: $secondary-gray;
+  }
+  &.active {
+    background-color: $secondary-gray;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

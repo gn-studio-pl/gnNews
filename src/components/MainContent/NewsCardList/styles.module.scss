@@ -1,0 +1,16 @@
+@import 'styles/colors.scss';
+
+.newsViewTiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.newsViewList {
+  max-width: 900px;
+  margin: 0 auto;
+  & > * {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+  }
+}

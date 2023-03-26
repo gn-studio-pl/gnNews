@@ -1,0 +1,17 @@
+@import 'styles/colors.scss';
+@import 'styles/mixins.scss';
+
+.sidebar {
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: $primary-light-grey;
+  border-right: 1px solid $primary-gray;
+}
+.countryListContainer {
+  @include scrollbar;
+  padding: 0.6rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 140px);
+}

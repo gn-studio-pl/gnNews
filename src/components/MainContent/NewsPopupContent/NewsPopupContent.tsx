@@ -3,8 +3,7 @@ import { News } from 'models/news';
 import dayjs from 'dayjs';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from 'store/store';
-
-const substituteImage = 'https://m.media-amazon.com/images/I/61ea3JvlmZL.jpg';
+import { SUBSTITUTE_IMAGE } from 'constants/index';
 
 const NewsPopupContent: React.FC = () => {
   const currentNews = useSelector((state: RootState) => state.currentNews.news);
@@ -14,17 +13,17 @@ const NewsPopupContent: React.FC = () => {
     <div className={styles.newsPopupContent}>
       <div
         className={styles.urlImage}
-        style={{ backgroundImage: `url(${urlToImage ? urlToImage : substituteImage})` }}
+        style={{ backgroundImage: `url(${urlToImage ? urlToImage : SUBSTITUTE_IMAGE})` }}
       />
       <div className={styles.content}>
-        <span>Data publikacji: {dayjs(publishedAt).format('DD-MM-YYYY')}</span>
-        <h4>Zródło: {source && source.name}</h4>
+        <span>Sublished: {dayjs(publishedAt).format('DD-MM-YYYY')}</span>
+        <h4>Source: {source && source.name}</h4>
         <h3>{title}</h3>
         <p>{description && description}</p>
         <p>{content}</p>
-        <span>Autor: {author && author}</span>
+        <span>Author: {author && author}</span>
         <a href={url} target='_blank' rel='noopener noreferrer'>
-          Przejdz do artykułu
+          Go to article
         </a>
       </div>
     </div>

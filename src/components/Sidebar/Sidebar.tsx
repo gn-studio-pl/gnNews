@@ -19,7 +19,7 @@ const SideMenu: React.FC = () => {
         <NavLink
           path={`/`}
           onClick={() => handleSelectCountry(ALL_COUNTRIES)}
-          title={'Wszystkie kraje'}
+          title={'All countries'}
           icon={'https://www.svgrepo.com/show/6996/world.svg'}
         />
         {countriesList.map((country, index) => (

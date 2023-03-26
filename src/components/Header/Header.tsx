@@ -7,6 +7,7 @@ import { MdViewModule, MdViewList } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from 'store/store';
 import Button from 'components/common/Button/Button';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const view = useSelector((state: RootState) => state.newsView.view);
@@ -26,7 +27,9 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <h1>gnNews</h1>
+      <Link to={`/`}>
+        <h1>gnNews</h1>{' '}
+      </Link>
       <div className={styles.headerActions}>
         <div className={styles.switches}>
           <IconButton

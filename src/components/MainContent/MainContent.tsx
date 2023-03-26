@@ -13,13 +13,13 @@ import { LIST_VIEW } from 'constants/index';
 import styles from './styles.module.scss';
 
 const MainContent: React.FC = () => {
-  const { error, isLoading } = useGetAllNewsQuery();
   const dispatch = useDispatch();
-  const [currentPage, setCurrentPage] = useState(1);
+  const newsData = useNewsApiData();
+  const { error, isLoading } = useGetAllNewsQuery();
 
   const view = useSelector((state: RootState) => state.newsView.view);
   const isNewsPopupOpen = useSelector((state: RootState) => state.popupView.newsPopup);
-  const newsData = useNewsApiData();
+  const [currentPage, setCurrentPage] = useState(1);
 
   const maxNewsPerPage = view === LIST_VIEW ? 3 : 6;
   const indexOfLastNews = currentPage * maxNewsPerPage;

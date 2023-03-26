@@ -23,7 +23,7 @@ const MainContent: React.FC = () => {
   return (
     <div className={styles.mainContent}>
       {error && <div>Error</div>}
-      {isLoading ? <div>Loading...</div> : <NewsCardList data={[]} view={view} />}
+      {isLoading ? <div>Loading...</div> : <NewsCardList data={newsData} view={view} />}
       {isNewsPopupOpen ? (
         <Popup closePopup={handleCloseNewsPopup}>
           <NewsPopupContent />

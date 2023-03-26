@@ -6,6 +6,10 @@ import { store } from './app/store'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import AppRoutes from './routes'
+import { PersistGate } from 'redux-persist/integration/react'
+import persistStore from 'redux-persist/es/persistStore'
+
+const persistor = persistStore(store)
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
@@ -13,9 +17,11 @@ const root = createRoot(container)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter basename="/">
-        <AppRoutes />
-      </HashRouter>
+      <PersistGate persistor={persistor}>
+        <HashRouter basename="/">
+          <AppRoutes />
+        </HashRouter>
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 )

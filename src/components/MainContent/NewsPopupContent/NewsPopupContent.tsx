@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { News } from 'models/news';
 import dayjs from 'dayjs';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from 'store/store';
 import { SUBSTITUTE_IMAGE } from 'constants/index';
 

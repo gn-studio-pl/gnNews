@@ -1,11 +1,10 @@
-import React from 'react';
-import { News } from 'models/news';
-import NewsCard from 'components/MainContent/NewsCard/NewsCard';
-import styles from './styles.module.scss';
-import { TILES_VIEW } from 'constants/index';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import {newsPopupView} from 'store/popupView';
 import { setCurrentNews } from 'store/currentNews';
+import { News } from 'models/news';
+import NewsCard from 'components/MainContent/NewsCard/NewsCard';
+import { TILES_VIEW } from 'constants/index';
+import styles from './styles.module.scss';
 
 interface NewsCardListProps {
   data: News[] | undefined;

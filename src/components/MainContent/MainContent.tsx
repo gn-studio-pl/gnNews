@@ -1,12 +1,13 @@
-import NewsCardList from 'components/MainContent/NewsCardList/NewsCardList';
-import { useGetAllNewsQuery } from 'store/newsApi';
-import styles from './styles.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
+import { useGetAllNewsQuery } from 'store/newsApi';
 import { RootState } from 'store/store';
-import Popup from 'components/Popup/Popup';
-import NewsPopupContent from './NewsPopupContent/NewsPopupContent';
 import { newsPopupView } from 'store/popupView';
 import { useNewsApiData } from 'hooks/useNewsApiData';
+
+import NewsCardList from 'components/MainContent/NewsCardList/NewsCardList';
+import Popup from 'components/common/Popup/Popup';
+import NewsPopupContent from './NewsPopupContent/NewsPopupContent';
+import styles from './styles.module.scss';
 
 const MainContent: React.FC = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const MainContent: React.FC = () => {
   return (
     <div className={styles.mainContent}>
       {error && <div>Error</div>}
-      {isLoading ? <div>Loading...</div> : <NewsCardList data={[]} view={view} />}
+      {isLoading ? <div>Loading...</div> : <NewsCardList data={newsData} view={view} />}
       {isNewsPopupOpen ? (
         <Popup closePopup={handleCloseNewsPopup}>
           <NewsPopupContent />

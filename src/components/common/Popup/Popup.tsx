@@ -9,7 +9,7 @@ import { MdOutlineClose } from 'react-icons/md';
 
 interface PopupProps {
   children: JSX.Element | JSX.Element[];
-  closePopup: () => void
+  closePopup: () => void;
 }
 
 const Popup: React.FC<PopupProps> = ({ children, closePopup }) => {
@@ -21,11 +21,7 @@ const Popup: React.FC<PopupProps> = ({ children, closePopup }) => {
       <div className={styles.popup} ref={refPopup}>
         {children}
         <div className={styles.btnContainer}>
-          <IconButton
-            onClick={closePopup}
-            title={'Zamknij popup'}
-            icon={<MdOutlineClose fontSize={'1.5rem'} />}
-          />
+          <IconButton onClick={closePopup} title={'Zamknij popup'} icon={<MdOutlineClose fontSize={'1.5rem'} />} />
         </div>
       </div>
     </div>

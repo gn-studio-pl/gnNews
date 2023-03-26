@@ -1,13 +1,15 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { RootState } from 'store/store';
 import { changeView } from 'store/newsView';
 import { mainPopupView } from 'store/popupView';
-import styles from './styles.module.scss';
-import { TILES_VIEW, LIST_VIEW } from 'constants/index';
+
 import IconButton from 'components/common/IconButton/IconButton';
-import { MdViewModule, MdViewList } from 'react-icons/md';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from 'store/store';
 import Button from 'components/common/Button/Button';
-import { Link } from 'react-router-dom';
+import { MdViewModule, MdViewList } from 'react-icons/md';
+
+import { TILES_VIEW, LIST_VIEW } from 'constants/index';
+import styles from './styles.module.scss';
 
 const Header: React.FC = () => {
   const view = useSelector((state: RootState) => state.newsView.view);

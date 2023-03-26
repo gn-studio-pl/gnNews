@@ -6,7 +6,7 @@ export interface NewsApiResponse {
 
 export interface News {
   author?: string | null;
-  content?: null;
+  content?:string | null;
   description?: string | null;
   title: string;
   url?: string;

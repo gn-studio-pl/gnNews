@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { TILES_VIEW } from 'constants/index';
 import { News } from 'models/news';
 
 const currentNewsSlice = createSlice({

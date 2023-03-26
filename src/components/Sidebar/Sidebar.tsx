@@ -1,10 +1,9 @@
-import styles from './styles.module.scss';
-import NavLink from 'components/common/NavLink/NavLink';
-import { countriesList } from 'db/countries';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from 'store/store';
+import { useDispatch } from 'react-redux';
 import { changeCountry } from 'store/countrySelector';
+import { countriesList } from 'db/countries';
 import {ALL_COUNTRIES} from 'constants/index'
+import NavLink from 'components/common/NavLink/NavLink';
+import styles from './styles.module.scss';
 
 const SideMenu: React.FC = () => {
   const dispatch = useDispatch();

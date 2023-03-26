@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useGetAllNewsQuery, useGetCountryNewsQuery } from 'store/newsApi';
 import { useSelector } from 'react-redux';
+import { useGetAllNewsQuery, useGetCountryNewsQuery } from 'store/newsApi';
 import { RootState } from 'store/store';
 import { News } from 'models/news';
 import { ALL_COUNTRIES } from 'constants/index';

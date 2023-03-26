@@ -1,4 +1,6 @@
+@import 'styles/colors.scss';
+
 .mainContent{
   padding: 2rem;
-  background-color: rgb(246, 246, 246);
+  background-color: $secondary-light-grey;
 }

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { News } from 'models/news';
 import styles from './styles.module.scss';

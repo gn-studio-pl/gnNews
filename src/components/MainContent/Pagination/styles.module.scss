@@ -1,0 +1,47 @@
+@import 'styles/colors.scss';
+
+.paginationBtn {
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(10px);
+}
+.paginationBtn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem .5rem;
+  margin: 4px;
+  border-radius: .3rem;
+  color: $primary-graphite;
+  cursor: pointer;
+  &:focus {
+    color: white;
+    background-color: $primary-graphite;
+  }
+  &:hover {
+    color: white;
+    background-color: $primary-graphite;
+  }
+}
+.paginationBtn a:hover {
+  color: white;
+  background-color: $primary-graphite;
+}
+.paginationActive a {
+  color: white;
+  background-color: $primary-graphite;
+}
+.paginationDisabled a {
+  color: rgb(163, 163, 163);
+  background-color: transparent;
+  &:focus {
+    color: rgb(163, 163, 163);
+    background-color: transparent;
+  }
+  &:hover {
+    background-color: transparent;
+  }
+}

@@ -15,32 +15,34 @@ const Header: React.FC = () => {
   const handleListView = () => {
     dispatch(changeView(LIST_VIEW));
   };
-  
+
   const handleTilesView = () => {
     dispatch(changeView(TILES_VIEW));
   };
 
   const handleOpenMainPopup = () => {
     dispatch(mainPopupView(true));
-  }
+  };
 
   return (
     <header className={styles.header}>
-      <div>logo</div>
-      <div className={styles.switches}>
-        <IconButton
-          onClick={handleListView}
-          title={LIST_VIEW}
-          icon={<MdViewList fontSize={'1.5rem'} />}
-          active={view === LIST_VIEW && true}
-        />
-        <IconButton
-          onClick={handleTilesView}
-          title={TILES_VIEW}
-          icon={<MdViewModule fontSize={'1.5rem'} />}
-          active={view === TILES_VIEW && true}
-        />
-      <Button title={'Popup'} onClick={handleOpenMainPopup}/>
+      <h1>gnNews</h1>
+      <div className={styles.headerActions}>
+        <div className={styles.switches}>
+          <IconButton
+            onClick={handleTilesView}
+            title={TILES_VIEW}
+            icon={<MdViewModule fontSize={'1.5rem'} />}
+            active={view === TILES_VIEW && true}
+          />
+          <IconButton
+            onClick={handleListView}
+            title={LIST_VIEW}
+            icon={<MdViewList fontSize={'1.5rem'} />}
+            active={view === LIST_VIEW && true}
+          />
+        </div>
+        <Button title={'Popup'} onClick={handleOpenMainPopup} />
       </div>
     </header>
   );

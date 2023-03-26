@@ -6,7 +6,7 @@ export const newsApi = createApi({
   baseQuery: fetchBaseQuery({ 
     baseUrl: 'https://newsapi.org/v2/',
     prepareHeaders: (headers) => {
-      headers.set('Authorization', '68b907e7a07c40f7af324ff1405041f6');
+      headers.set('Authorization', '7130c9bb566847c4bb868670171ba75b');
       return headers
     },
   }),

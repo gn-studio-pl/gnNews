@@ -10,9 +10,9 @@ export interface News {
   description?: string | null;
   title: string;
   url?: string;
-  urlToImage?: string | null;
-  publishedAt?: Date;
-  source?: Source;
+  urlToImage: string | null;
+  publishedAt: Date;
+  source: Source;
 }
 
 export interface Source {

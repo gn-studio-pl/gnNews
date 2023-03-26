@@ -15,4 +15,3 @@ const newsViewSlice = createSlice({
 
 export const { changeView } = newsViewSlice.actions;
 export default newsViewSlice.reducer;
-//export const lastUsedView = (state: any) => state.viewStyle.view;

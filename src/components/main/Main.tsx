@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { getValue } from "../../features/newsCounter/newsCounter";
 import { Card } from "./card/Card";

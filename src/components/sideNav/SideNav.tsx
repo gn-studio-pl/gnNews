@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import "./sideNav.css";
 import { NavLink } from "react-router-dom";
 import CountryRoute from "./countryRoute/CountryRoute";
+import { useAppSelector } from "../../app/hooks";
 
 export const SideNav = () => {
+  const sidebarState = useAppSelector((state) => state.sidebar.sidebarState);
+
+  useEffect(() => {
+    console.log(sidebarState);
+  }, [sidebarState]);
+
   return (
-    <nav className="side-nav">
+    <nav className={sidebarState === "open" ? "side-nav-active" : "side-nav"}>
       <ul>
         <NavLink to="/country/pl">
           <CountryRoute country="poland" flag="pl" />

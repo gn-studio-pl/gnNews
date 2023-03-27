@@ -52,9 +52,7 @@ export const Card = ({ article }: CardProps) => {
                 alt="no image found"
               />
             )}
-            <a className="url" href={article.url}>
-              <button>READ MORE</button>
-            </a>
+            <button className="read-more-btn">READ MORE</button>
           </div>
         )}
       </div>

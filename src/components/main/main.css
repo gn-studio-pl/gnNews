@@ -27,5 +27,21 @@
   padding: 1rem 2rem 2rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    margin-left: 0px;
+  }
+
+  .news-layout-list {
+    padding: 0.3rem;
+    gap: 0.5rem;
+  }
+  .news-layout-tiles {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
 }

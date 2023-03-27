@@ -13,8 +13,8 @@ interface CountryNewsSlice {
     author: string;
     title: string;
     url: string;
-    image?: File;
-    date: Date;
+    urlToImage?: File;
+    publishedAt: Date;
   }>;
   loading: boolean;
   error: string;

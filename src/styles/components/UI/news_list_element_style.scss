@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .element {
-  @include button_a_with_shadow(50px);
+  @include button_a_with_shadow(auto);
   width: 100%;
   padding: 0 25px;
 
@@ -11,14 +11,20 @@
   align-items: center;
   justify-items: flex-start;
 
+  text-decoration: none;
+  color: $c-dark;
+
   .title {
     grid-area: title;
     font-weight: 700;
+    justify-self: start;
+    place-self: center;
   }
 
   .author {
     grid-area: author;
     color: $c-purple;
+    justify-self: flex-end;
   }
 
   .date {

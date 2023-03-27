@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../styles/components/sidebar_style.scss";
 
 import cardsIcon from "../assets/icons/cards.svg";

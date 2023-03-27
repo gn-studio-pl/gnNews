@@ -3,7 +3,10 @@
 .card {
   @include button_a_with_shadow(170px);
   width: 200px;
-  padding: 0;
+  padding: 0 10px;
+
+  text-decoration: none;
+  color: $c-dark;
 
   display: flex;
   flex-direction: column;

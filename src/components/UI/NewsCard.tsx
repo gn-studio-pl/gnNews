@@ -2,11 +2,17 @@ import React from "react";
 
 import "../../styles/components/UI/news_card_style.scss";
 
-export const NewsCard = () => {
+type Props = {
+  url: string;
+  title: string;
+  urlToImage?: File | undefined;
+};
+
+export const NewsCard = ({ url, title, urlToImage }: Props) => {
   return (
-    <div className="card">
-      <img src="https://www.facebook.com/favicon.ico" alt="favicon" />
-      <p>Tytuł artykułu. Nazwa nagłówka .... coś </p>
-    </div>
+    <a className="card" href={url}>
+      {/* <img src={urlToImage} alt="icon" /> */}
+      <p>{title} </p>
+    </a>
   );
 };

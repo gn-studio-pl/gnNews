@@ -3,12 +3,14 @@ import { useAppSelector } from "../../../app/hooks";
 import { Article } from "../Main";
 import { NewsModal } from "./newsModal/NewsModal";
 import "./card.css";
+import { useTranslation } from "react-i18next";
 
 interface CardProps {
   article: Article;
 }
 
 export const Card = ({ article }: CardProps) => {
+  const { t } = useTranslation();
   const [isOpenModal, setIsOpenModal] = useState(false);
   const newsLayoutState = useAppSelector(
     (state) => state.newsLayout.newsLayoutState
@@ -34,8 +36,12 @@ export const Card = ({ article }: CardProps) => {
           )}
         </h3>
         <div className="source-date">
-          <p className="source">Source: {article.author}</p>
-          <p>Published: {article.publishedAt.slice(0, 10)}</p>
+          <p className="source">
+            {t("card.source")}: {article.author}
+          </p>
+          <p>
+            {t("card.published")}: {article.publishedAt.slice(0, 10)}
+          </p>
         </div>
         {newsLayoutState === "grid" && (
           <div>
@@ -52,7 +58,7 @@ export const Card = ({ article }: CardProps) => {
                 alt="no image found"
               />
             )}
-            <button className="read-more-btn">READ MORE</button>
+            <button className="read-more-btn">{t("card.readMore")}</button>
           </div>
         )}
       </div>

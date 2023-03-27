@@ -1,9 +1,11 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleLayout } from "./newsLayout";
 import "./newsLayoutBtn.css";
 
 export const NewsLayoutBtn = () => {
+  const { t } = useTranslation();
   const newsLayoutState = useAppSelector(
     (state) => state.newsLayout.newsLayoutState
   );
@@ -16,11 +18,11 @@ export const NewsLayoutBtn = () => {
       onClick={() => dispatch(toggleLayout())}
     >
       <span className={newsLayoutState === "list" ? "active-layout" : ""}>
-        list
+        {t("newsLayout.list")}
       </span>{" "}
       /{" "}
       <span className={newsLayoutState === "grid" ? "active-layout" : ""}>
-        grid
+        {t("newsLayout.grid")}
       </span>
     </button>
   );

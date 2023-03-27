@@ -103,6 +103,15 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   color: #b8f322;
 }
 
+.lngs-container {
+  margin-left: 1rem;
+}
+
+.lngs-container button {
+  padding: 0.2rem;
+  margin-right: 0.2rem;
+}
+
 @media (max-width: 700px) {
   .header {
     flex-direction: column;

@@ -8,7 +8,11 @@ import { getDataFromApi } from "../store/countryNews/CountryNewsSlice";
 
 import "../styles/pages/country_news.scss";
 
-export const CountryNews = () => {
+type Props = {
+  code: string;
+};
+
+export const CountryNews = ({ code }: Props) => {
   const news = useSelector((state: RootState) => {
     return state.news;
   });
@@ -17,8 +21,8 @@ export const CountryNews = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(getDataFromApi("pl"));
-  }, [dispatch]);
+    dispatch(getDataFromApi(code));
+  }, [code, dispatch]);
 
   return (
     <Container>
@@ -28,6 +32,7 @@ export const CountryNews = () => {
         ) : switchBoolean ? (
           news.articles.map((element) => (
             <NewsListElement
+              key={element.title}
               title={element.title}
               author={element.author}
               date={element.publishedAt}
@@ -37,6 +42,7 @@ export const CountryNews = () => {
         ) : (
           news.articles.map((element) => (
             <NewsCard
+              key={element.title}
               title={element.title}
               url={element.url}
               // urlToImage={element.urlToImage}

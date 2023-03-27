@@ -2,23 +2,25 @@
 
 .element {
   @include button_a_with_shadow(auto);
-  width: 100%;
+  width: 95%;
   padding: 0 25px;
 
   display: grid;
   grid-template-areas: "title author date";
   grid-template-columns: auto 200px 200px;
   align-items: center;
-  justify-items: flex-start;
 
   text-decoration: none;
   color: $c-dark;
 
   .title {
     grid-area: title;
+    width: 100%;
     font-weight: 700;
-    justify-self: start;
-    place-self: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: start;
   }
 
   .author {

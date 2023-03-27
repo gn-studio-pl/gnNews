@@ -5,15 +5,14 @@ aside {
   min-width: 270px;
   border-right: 1px solid $c-purple;
 
-  // flex-grow: 1;
-
   display: flex;
+  flex-direction: column;
   position: sticky;
   top: $nav-height + 55px;
 
   a {
     height: 50px;
-    width: 100%;
+    max-width: 100%;
 
     display: flex;
     justify-content: space-between;

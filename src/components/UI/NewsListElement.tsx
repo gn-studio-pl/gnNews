@@ -14,7 +14,10 @@ export const NewsListElement = ({ title, author, date, url }: Props) => {
     <a className="element" href={url}>
       <p className="title">{title}</p>
       <p className="author">{author}</p>
-      <p className="date">{`${date} | 12:00`}</p>
+      <p className="date">
+        {`${date}`}
+        {/* {`${date} | 12:00`} */}
+      </p>
     </a>
   );
 };

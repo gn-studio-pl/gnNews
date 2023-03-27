@@ -52,7 +52,6 @@ const countriesNewsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getDataFromApi.pending, (state) => {
       state.loading = true;
-      console.log("pending", state);
     });
     builder.addCase(getDataFromApi.fulfilled, (state, action) => {
       state.loading = false;

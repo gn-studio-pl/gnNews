@@ -1,6 +1,12 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 import "../styles/components/footer_style.scss";
 
 export const Footer = () => {
+  const numberOfArticles = useSelector(
+    (state: RootState) => state.news.articles.length
+  );
+
   return (
     <footer className="footer">
       <p>
@@ -10,7 +16,7 @@ export const Footer = () => {
       <div className="footer_data">
         <span className="clock">12:00</span>
         <p>|</p>
-        <p>number of articles: 300 </p>
+        <p>number of articles: {numberOfArticles} </p>
       </div>
     </footer>
   );

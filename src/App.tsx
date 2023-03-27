@@ -3,16 +3,10 @@ import { Footer, Navbar } from "./components";
 import { CountryNews, HomePage, NotFoundPage } from "./pages";
 import { Route, Routes } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
-import { getDataFromApi } from "./store/countryNews/CountryNewsSlice";
-import { AppDispatch } from "./store";
+import { countries } from "./config/countries";
 
 function App() {
-  const dispatch = useDispatch<AppDispatch>();
-
   const countryName = "POLAND";
-
-  dispatch(getDataFromApi("pl"));
 
   return (
     <div className="App">
@@ -20,7 +14,15 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path={`/country/${countryName}`} element={<CountryNews />} />
+        <>
+          {countries.map((country) => (
+            <Route
+              key={country.code}
+              path={`/country/${country.name}`}
+              element={<CountryNews code={country.code} />}
+            />
+          ))}
+        </>
       </Routes>
 
       <Footer />

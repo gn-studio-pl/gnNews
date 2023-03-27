@@ -2,6 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import "../styles/components/sidebar_style.scss";
 
 import cardsIcon from "../assets/icons/cards.svg";
+import { countries } from "../config/countries";
 
 export const Sidebar = () => {
   const location = useLocation();
@@ -10,14 +11,12 @@ export const Sidebar = () => {
 
   return (
     <aside>
-      {/* <NavLink to="/">Sidebar</NavLink> */}
-      <NavLink
-        to={`/country/${countryName}`}
-        // className={location.pathname === countryName ? "active" : ""}
-      >
-        <img src={cardsIcon} alt="flag" />
-        {countryName}
-      </NavLink>
+      {countries.map((country) => (
+        <NavLink key={country.code} to={`/country/${country.name}`}>
+          <img src={cardsIcon} alt="flag" />
+          {country.name.toUpperCase()}
+        </NavLink>
+      ))}
     </aside>
   );
 };

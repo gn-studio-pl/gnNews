@@ -26,6 +26,7 @@ aside {
 
     &:hover {
       border: 1px solid $c-purple;
+      border-style: solid none solid solid;
     }
 
     &.active {

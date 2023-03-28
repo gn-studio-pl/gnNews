@@ -3,7 +3,8 @@
 .card {
   @include button_a_with_shadow(170px);
   width: 200px;
-  padding: 0 10px;
+  height: auto;
+  padding: 20px 10px;
 
   text-decoration: none;
   color: $c-dark;
@@ -15,8 +16,15 @@
   gap: 20px;
   font-weight: 700;
 
+  p {
+    margin: 0;
+  }
+
   img {
-    height: 40px;
-    width: 40px;
+    height: 100px;
+  }
+
+  .gnNews {
+    height: 30px;
   }
 }

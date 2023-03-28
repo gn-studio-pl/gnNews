@@ -45,7 +45,7 @@ export const CountryNews = ({ code }: Props) => {
               key={element.title}
               title={element.title}
               url={element.url}
-              // urlToImage={element.urlToImage}
+              urlToImage={element.urlToImage}
             />
           ))
         )}

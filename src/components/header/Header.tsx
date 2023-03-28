@@ -1,54 +1,46 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useAppDispatch } from "../../app/hooks";
-import { getValue } from "../../features/newsCounter/newsCounter";
-import { toggleSidebarState } from "../../features/sidebarState/sidebarState";
-import { NewsLayoutBtn } from "../../features/newsLayout/NewsLayoutBtn";
-import { Modal } from "./modal/Modal";
-import "./header.css";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { useAppDispatch } from "../../redux/app/hooks";
+
+import "./header.css";
+import { NewsLayoutBtn } from "./newsLayout/NewsLayoutBtn";
+import { Popup } from "../utils/popup/Popup";
+import { SideNavIcon } from "./sideNavIcon/SideNavIcon";
+import { setNumberOfArticles } from "../../redux/features/articles";
+
+interface LngProps {
+  nativeName: string;
+  flag: string;
+}
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useAppDispatch();
 
   const { t, i18n } = useTranslation();
-  const lngs: any = {
-    en: { nativeName: "English", flag: "gb" },
-    pl: { nativeName: "Polish", flag: "pl" },
-  };
+  const lngs: LngProps[] = [
+    { nativeName: "English", flag: "gb" },
+    { nativeName: "Polish", flag: "pl" },
+  ];
 
   return (
     <header className="header">
       <div className="logo-sidebar">
-        <div className="side-nav-icon">
-          <label htmlFor="check">
-            <input
-              onClick={() => dispatch(toggleSidebarState())}
-              type="checkbox"
-              id="check"
-            />
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
-        <Link onClick={() => dispatch(getValue(0))} to="/">
+        <SideNavIcon />
+        <Link onClick={() => dispatch(setNumberOfArticles(0))} to="/">
           <h1>
             gn<span>News</span>
           </h1>
         </Link>
         <div className="lngs-container">
-          {Object.keys(lngs).map((lng) => (
+          {lngs.map((lng) => (
             <button
-              key={lng}
-              style={{
-                fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-              }}
+              key={lng.nativeName}
               type="submit"
-              onClick={() => i18n.changeLanguage(lng)}
+              onClick={() => i18n.changeLanguage(lng.flag)}
             >
-              <span className={`fi fi-${lngs[lng].flag}`}></span>
+              <span className={`fi fi-${lng.flag}`}></span>
             </button>
           ))}
         </div>
@@ -56,7 +48,7 @@ export const Header = () => {
       <div className="nav-btns">
         <NewsLayoutBtn />
         <button onClick={() => setIsOpen(true)}>{t("popup.popup")}</button>
-        <Modal open={isOpen} onClose={() => setIsOpen(false)} />
+        <Popup open={isOpen} onClose={() => setIsOpen(false)} />
       </div>
     </header>
   );

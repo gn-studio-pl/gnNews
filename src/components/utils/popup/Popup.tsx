@@ -1,12 +1,11 @@
-import React from "react";
-import "./modal.css";
+import "./popup.css";
 
-interface ModalProps {
+interface PopupProps {
   open: boolean;
   onClose: () => void;
 }
 
-export const Modal = ({ open, onClose }: ModalProps) => {
+export const Popup = ({ open, onClose }: PopupProps) => {
   if (!open) return null;
 
   return (

@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import newsCounterReducer from "../features/newsCounter/newsCounter";
-import newsLayoutReducer from "../features/newsLayout/newsLayout";
-import sidebarStateReducer from "../features/sidebarState/sidebarState";
+import newsLayoutReducer from "../features/newsLayout";
+import sidebarStateReducer from "../features/sidebarState";
+import articlesReducer from "../features/articles";
 
 export const store = configureStore({
   reducer: {
     newsLayout: newsLayoutReducer,
-    newsCounter: newsCounterReducer,
     sidebar: sidebarStateReducer,
+    articles: articlesReducer,
   },
 });
 

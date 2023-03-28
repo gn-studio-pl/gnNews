@@ -1,24 +1,20 @@
-import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useLoaderData } from "react-router-dom";
-import { useAppSelector } from "../../app/hooks";
-import { Article } from "../main/Main";
-import { Clock } from "./clock/Clock";
+import useClock from "../../hooks/useClock";
+import { useAppSelector } from "../../redux/app/hooks";
 import "./footer.css";
 
 export const Footer = () => {
   const { t } = useTranslation();
-  const newsCounterState = useAppSelector(
-    (state) => state.newsCounter.newsCounterState
+  const articleNumber = useAppSelector(
+    (state) => state.articles.articlesNumber
   );
+  const { currentTime } = useClock("");
 
   return (
     <footer className="footer">
-      <div className="clock">
-        <Clock />
-      </div>
+      <div className="clock">{currentTime}</div>
       <div className="news-counter">
-        {t("footer.articles")}: <span>{newsCounterState}</span>
+        {t("footer.articles")}: <span>{articleNumber}</span>
       </div>
     </footer>
   );

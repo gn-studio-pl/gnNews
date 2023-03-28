@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { toggleLayout } from "./newsLayout";
+import { useAppDispatch, useAppSelector } from "../../../redux/app/hooks";
+import { toggleLayout } from "../../../redux/features/newsLayout";
 import "./newsLayoutBtn.css";
 
 export const NewsLayoutBtn = () => {

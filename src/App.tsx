@@ -1,4 +1,3 @@
-import { Trans, useTranslation } from "react-i18next";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -6,19 +5,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import { NewsError } from "./components/main/error/NewsError";
-import { Main, newsLoader } from "./components/main/Main";
+import { Main } from "./components/main/Main";
 import { RootLayout } from "./layouts/RootLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route
-        path="/country/:country"
-        element={<Main />}
-        loader={newsLoader}
-        errorElement={<NewsError />}
-      />
+      <Route path="/country/:country" element={<Main />} />
     </Route>
   )
 );

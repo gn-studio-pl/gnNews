@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAppSelector } from "../../../app/hooks";
+import { useAppSelector } from "../../../redux/app/hooks";
 import { Article } from "../Main";
 import { NewsModal } from "./newsModal/NewsModal";
 import "./card.css";

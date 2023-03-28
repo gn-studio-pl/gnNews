@@ -1,0 +1,17 @@
+.main-default {
+  margin-left: 250px;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: gray;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 700px) {
+  .main-default {
+    margin-left: 0px;
+  }
+}

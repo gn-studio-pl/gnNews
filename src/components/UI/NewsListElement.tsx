@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { ADD_ARTICLE, CHANGE_IS_OPEN } from "../../store/modal/modalSlice";
 
 import "../../styles/components/UI/news_list_element_style.scss";
 
@@ -10,6 +12,8 @@ type Props = {
 };
 
 export const NewsListElement = ({ title, author, date, url }: Props) => {
+  const dispatch = useDispatch();
+
   const stringToDate = new Date(date);
   // const month = stringToDate.getMonth() + 1;
 
@@ -24,14 +28,19 @@ export const NewsListElement = ({ title, author, date, url }: Props) => {
   //   minutes: stringToDate.getMinutes().toString().padStart(2, "0"),
   // };
 
+  const openModal = () => {
+    dispatch(CHANGE_IS_OPEN());
+    dispatch(ADD_ARTICLE({ title: title, author: author, url: url }));
+  };
+
   return (
-    <a className="element" href={url}>
+    <div className="element" onClick={openModal}>
       <p className="title">{title}</p>
       <p className="author">{author}</p>
       <p className="date">
         {`${newsDate} | ${newsTime}`}
         {/* {`${articleDate.day}.${articleDate.month}.${articleDate.year}  |  ${articleDate.hour}:${articleDate.minutes}`} */}
       </p>
-    </a>
+    </div>
   );
 };

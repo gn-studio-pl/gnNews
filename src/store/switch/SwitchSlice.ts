@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isList: true,
-  value: 0,
 };
 
 const switchSlice = createSlice({
@@ -11,7 +10,6 @@ const switchSlice = createSlice({
   reducers: {
     changeSwitch: (state) => {
       state.isList = !state.isList;
-      state.value += 1;
     },
   },
 });

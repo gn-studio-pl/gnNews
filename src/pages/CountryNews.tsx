@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Container } from "../components";
-import { NewsCard, NewsListElement } from "../components/UI";
+import { Modal, NewsCard, NewsListElement } from "../components/UI";
 import { AppDispatch, RootState } from "../store";
 import { getDataFromApi } from "../store/countryNews/CountryNewsSlice";
 
@@ -17,6 +17,9 @@ export const CountryNews = ({ code }: Props) => {
     return state.news;
   });
   const switchBoolean = useSelector((state: RootState) => state.switch.isList);
+  const isOpen = useSelector((state: RootState) => {
+    return state.modal.isOpen;
+  });
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -46,9 +49,11 @@ export const CountryNews = ({ code }: Props) => {
               title={element.title}
               url={element.url}
               urlToImage={element.urlToImage}
+              author={element.author}
             />
           ))
         )}
+        {isOpen && <Modal />}
       </div>
     </Container>
   );

@@ -6,7 +6,6 @@ import '../src/style/App.css';
 import Header from './components/Header';
 import SideBar from './components/SideBar/SideBar';
 import NewsContainer from './modules/NewsContainer';
-import SideBarArrow from './components/SideBar/SideBarArrow';
 import useSingleNews from './modules/SingleNews.tsx/useSingleNews';
 
 function App() {
@@ -17,9 +16,8 @@ function App() {
   return (
     <div>
       <Header />
-      <SideBarArrow toggle={toggle} />
       <SideBar toggle={toggle} isOpen={isOpen} />
-      <NewsContainer data={data} />
+      <NewsContainer data={data && data} />
     </div>
   );
 }

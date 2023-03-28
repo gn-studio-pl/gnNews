@@ -10,6 +10,7 @@ type Props = {
 const SideBar = ({ toggle, isOpen }: Props) => {
   return (
     <>
+      <SideBarArrow toggle={toggle} />
       <div className={`${isOpen ? '' : 'd-none'}`}>
         <Offcanvas tabIndex={-1} isOpen={isOpen} toggle={toggle}>
           <OffcanvasHeader toggle={toggle}>Offcanvas</OffcanvasHeader>

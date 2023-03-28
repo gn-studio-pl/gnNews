@@ -1,19 +1,22 @@
 import React from 'react';
-import { JsxElement } from 'typescript';
 
-const SingleNews = ({ data }: any) => {
+import { Article } from '../../types/types';
+import Tile from './Tile';
+
+type Props = {
+  data: Article[];
+};
+const SingleNews = ({ data }: Props) => {
   const reduxFunctionality = true;
 
   const listContent = () => {
     return (
       data &&
-      data.map((el: any) => {
+      data.map((news) => {
         return (
           <li className="list-group-item">
-            <div>
-              <h5>{el.title}</h5>
-              <a href={el.link}>{el.link}</a>
-            </div>
+            <p className="mb-1">{news.publishedAt.replace(/T|Z/g, ' ').slice(0, 16)}</p>
+            <a href={news.url}>{news.title}</a>
           </li>
         );
       })
@@ -23,16 +26,8 @@ const SingleNews = ({ data }: any) => {
   const tileContent = () => {
     return (
       data &&
-      data.map((el: any) => {
-        const mediaUrl = el.urlToImage;
-        console.log(mediaUrl);
-        return (
-          <div className="d-flex flex-column m-2 border border-dark" style={{ width: 200 }}>
-            <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="media" className="img-fluid" />
-
-            <p>{el.title}</p>
-          </div>
-        );
+      data.map((news) => {
+        return <Tile news={news} />;
       })
     );
   };

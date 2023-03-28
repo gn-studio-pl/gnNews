@@ -5,7 +5,7 @@ type Props = {
   toggle: () => void;
 };
 const SideBarArrow = ({ toggle }: Props) => {
-  return <AiOutlineRight className="sidebar-arrow" onClick={toggle} />;
+  return <AiOutlineRight className="sidebar-arrow " onClick={toggle} />;
 };
 
 export default SideBarArrow;

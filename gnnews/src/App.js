@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "../src/components/organisms/Navbar";
+import Footer from "../src/components/organisms/Footer";
+import Modal from "../src/components/molecules/Modal";
+import { useState } from "react";
+import HomePage from "../src/pages/HomePage";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;

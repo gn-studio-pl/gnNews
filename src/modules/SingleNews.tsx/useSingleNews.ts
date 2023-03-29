@@ -11,13 +11,16 @@ const useSingleNews = () => {
   const [data, setData] = useState<Article[]>([]);
   const getNewsData = async () => {
     try {
-      let res = await axios({ method: 'GET', url: `http://localhost:8080/data/data.json` });
+      let res = await axios({
+        method: 'GET',
+        url: `https://newsapi.org/v2/everything?q=content&language=pl&pageSize=40&apiKey=${apiKey}`,
+      });
       res.data && setData(res.data.articles);
     } catch (error) {
       console.log(error);
     }
   };
-
+  console.log(data);
   useEffect(() => {
     getNewsData();
   }, []);

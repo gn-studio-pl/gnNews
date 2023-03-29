@@ -14,7 +14,7 @@ function App() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="container bg-white">
       <Header />
       <SideBar toggle={toggle} isOpen={isOpen} />
       <NewsContainer data={data && data} />

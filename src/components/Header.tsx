@@ -1,33 +1,39 @@
 import React from 'react';
 import { Button, Navbar, NavbarBrand } from 'reactstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import { AiOutlineAppstore, AiOutlineBars } from 'react-icons/ai';
+import newsFormatSlice from '../store/newsFormat';
 
 function Header() {
-  const reduxFunctionality = false;
+  const dispatch = useDispatch();
+  const isTile = useSelector((state: any) => state.isTileFormat);
+
+  const changeFormat = () => {
+    dispatch(newsFormatSlice.actions.toggle());
+  };
   return (
-    <Navbar sticky="top" className="fw-bold d-flex bg-primary">
-      <NavbarBrand className="d-flex justify-content-between text-white fs-2 p-0" href="/">
-        gnNews
-      </NavbarBrand>
-      <div className="w-50 d-flex justify-content-end ">
-        <button className="border-0 bg-transparent">
-          {reduxFunctionality ? (
-            <AiOutlineBars className="bg-transparent text-white" style={{ height: 35, width: 35 }} />
-          ) : (
-            <AiOutlineAppstore className="bg-transparent text-white" style={{ height: 35, width: 35 }} />
-          )}
-        </button>
-        {/* <Button color="primary" outline className="p-2 me-2">
-            Change content
-          </Button> */}
-        <Button outline color="light" className="p-2 me-2">
-          PopUp
-        </Button>
-        <Button outline color="light" className="p-2">
-          Choose Language
-        </Button>
-      </div>
-    </Navbar>
+    <div className="p1">
+      <a href="/" className="d-flex flex-column align-items-center bg-white text-decoration-none text-dark">
+        <img className="mb-2" src={`${process.env.PUBLIC_URL + '/images/logo.png'}`} alt="logo" height={'120px'} />
+      </a>
+      <Navbar sticky="top" className="fw-bold d-flex bg-white border-bottom border-top">
+        <div className="d-flex">
+          <button className="border-0 bg-transparent" onClick={changeFormat}>
+            {isTile ? (
+              <AiOutlineBars className="bg-transparent text-black" style={{ height: 35, width: 35 }} />
+            ) : (
+              <AiOutlineAppstore className="bg-transparent text-black" style={{ height: 35, width: 35 }} />
+            )}
+          </button>
+          <button color="primary" className="bg-white border-0 p-2 me-2">
+            PopUp
+          </button>
+          <button color="primary" className="bg-white border-0 p-2">
+            Choose Language
+          </button>
+        </div>
+      </Navbar>
+    </div>
   );
 }
 

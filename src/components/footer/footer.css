@@ -1,0 +1,37 @@
+.footer {
+  position: absolute;
+  height: 7%;
+  bottom: 0;
+  background-color: #545454;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.clock {
+  font-size: 1.5rem;
+  padding-right: 2rem;
+  color: white;
+}
+
+.news-counter {
+  font-size: 1.3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.news-counter span {
+  padding-left: 0.5rem;
+  font-size: 1.7rem;
+  color: #a3cf34;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    height: fit-content;
+  }
+}

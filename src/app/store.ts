@@ -15,16 +15,18 @@ import {
 } from 'redux-persist'
 import persistReducer from 'redux-persist/es/persistReducer'
 import storage from 'redux-persist/lib/storage'
+import appReducer from './features/appSlice'
 import { newsApi } from './services/newsApi'
 
 const persistConfig = {
   key: 'root',
   version: 1,
   storage,
-  blacklist: ['newsApi.reducerPath']
+  blacklist: ['app']
 }
 
 const reducers = combineReducers({
+  app: appReducer,
   [newsApi.reducerPath]: newsApi.reducer
 })
 

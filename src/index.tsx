@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
 import { store } from './app/store'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
 import AppRoutes from './routes'
 import { PersistGate } from 'redux-persist/integration/react'
 import persistStore from 'redux-persist/es/persistStore'
+import './style/main.scss'
 
 const persistor = persistStore(store)
 

@@ -1,25 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useGetListOfCountryQuery } from '../app/services/newsApi'
-import { Skeleton } from '../components'
+import { Menu, TextBold } from '../components'
 
 const SideBar = () => {
-  const { data, isLoading, isError } = useGetListOfCountryQuery('')
-
-  function generateCountryList(): React.ReactNode {
-    return data?.map((countryName: string) => (
-      <Link to={`country/${countryName}`} key={countryName}>
-        {countryName}
-      </Link>
-    ))
-  }
-
-  const renderCountryList = generateCountryList()
+  const { data } = useGetListOfCountryQuery('')
 
   return (
-    <div className="side-bar">
-      {isLoading ? <Skeleton /> : renderCountryList}
-    </div>
+    <aside className="w-60 fixed top-[60px] overflow-y-auto h-[calc(100vh-60px)]">
+      {data && (
+        <div className="bg-white h-20 fixed z-50 flex items-center">
+          <TextBold>News from country</TextBold>
+        </div>
+      )}
+
+      <Menu />
+    </aside>
   )
 }
 

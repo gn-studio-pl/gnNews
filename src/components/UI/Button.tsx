@@ -1,9 +1,16 @@
 import "../../styles/components/UI/button_style.scss";
 
 type props = {
-  children: string;
+  title: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Button = ({ children }: props) => {
-  return <button className="styled_button">{children}</button>;
+export const Button = ({ title, onClick }: props) => {
+  return (
+    <>
+      <button className="styled_button" onClick={onClick}>
+        {title}
+      </button>
+    </>
+  );
 };

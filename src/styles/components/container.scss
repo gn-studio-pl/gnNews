@@ -1,8 +1,10 @@
+@import "../variables.scss";
+
 .container {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: flex-start;
-  margin: 55px 0;
+  margin: $container-margin 0;
   gap: 50px;
 }

@@ -1,14 +1,14 @@
 @import "../variables.scss";
 
 aside {
-  height: calc(100vh - $nav-height - 55px - 110px);
+  height: calc(100vh - $nav-height - $container-margin - 110px);
   min-width: 270px;
   border-right: 1px solid $c-purple;
 
   display: flex;
   flex-direction: column;
   position: sticky;
-  top: $nav-height + 55px;
+  top: $nav-height + $container-margin;
 
   a {
     height: 50px;

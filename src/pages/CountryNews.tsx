@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Container } from "../components";
-import { Modal, NewsCard, NewsListElement } from "../components/UI";
+import { Modal, NewsCard, NewsListElement, Loader } from "../components/UI";
 import { AppDispatch, RootState } from "../store";
 import { getDataFromApi } from "../store/countryNews/CountryNewsSlice";
 
@@ -16,9 +16,12 @@ export const CountryNews = ({ code }: Props) => {
   const news = useSelector((state: RootState) => {
     return state.news;
   });
+  const article = useSelector((state: RootState) => {
+    return state.modal.article;
+  });
   const switchBoolean = useSelector((state: RootState) => state.switch.isList);
   const isOpen = useSelector((state: RootState) => {
-    return state.modal.isOpen;
+    return state.modal.isOpenNews;
   });
 
   const dispatch = useDispatch<AppDispatch>();
@@ -27,11 +30,20 @@ export const CountryNews = ({ code }: Props) => {
     dispatch(getDataFromApi(code));
   }, [code, dispatch]);
 
+  // const url =
+  //   "https://wydarzenia.interia.pl/kraj/news-donald-tusk-wskazuje-na-szpitale-prawie-wszedzie-slyszelismy,nId,6682781";
+
+  // const onLoadIframe = () => {
+  //   const iframe = document.getElementById("iframe");
+
+  //   return iframe.innerHTML;
+  // };
+
   return (
     <Container>
       <div className={switchBoolean ? "all_news_list" : "all_news_cards"}>
         {news.loading ? (
-          <p>Loading...</p>
+          <Loader />
         ) : switchBoolean ? (
           news.articles.map((element) => (
             <NewsListElement
@@ -53,8 +65,24 @@ export const CountryNews = ({ code }: Props) => {
             />
           ))
         )}
-        {isOpen && <Modal />}
+        {isOpen && (
+          <Modal>
+            <p>{article?.author}</p>
+            <p>{article?.title}</p>
+            <a href={article?.url}>Link</a>
+          </Modal>
+        )}
       </div>
+      {/* <iframe
+        id="iframe"
+        src={url}
+        width={1000}
+        height={500}
+        sandbox="allow-same-origin"
+        // sandbox="allow-scripts allow-modal"
+        loading="eager"
+        title="urlPage"
+      /> */}
     </Container>
   );
 };

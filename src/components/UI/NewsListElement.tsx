@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { ADD_ARTICLE, CHANGE_IS_OPEN } from "../../store/modal/modalSlice";
+import { ADD_ARTICLE, CHANGE_IS_OPEN_NEWS } from "../../store/modal/modalSlice";
 
 import "../../styles/components/UI/news_list_element_style.scss";
 
@@ -29,7 +29,7 @@ export const NewsListElement = ({ title, author, date, url }: Props) => {
   // };
 
   const openModal = () => {
-    dispatch(CHANGE_IS_OPEN());
+    dispatch(CHANGE_IS_OPEN_NEWS());
     dispatch(ADD_ARTICLE({ title: title, author: author, url: url }));
   };
 

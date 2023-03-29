@@ -15,8 +15,6 @@ export const ToggleSwitch = () => {
           dispatch(changeSwitch());
           console.log(switchBoolean);
         }}
-        //   name={props.name}
-        //   checked={props.checked}
       />
       <span />
     </label>

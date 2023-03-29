@@ -24,7 +24,10 @@ export const SideNav = () => {
   ];
 
   return (
-    <nav className={sidebarState === "open" ? "side-nav-active" : "side-nav"}>
+    <nav
+      role="nav"
+      className={sidebarState === "open" ? "side-nav-active" : "side-nav"}
+    >
       <ul>
         {countries.map((country) => {
           return (

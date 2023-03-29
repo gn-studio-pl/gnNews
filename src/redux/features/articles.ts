@@ -20,14 +20,12 @@ export interface articlesProps {
   loading: boolean;
   articles: Article[];
   error: string | undefined;
-  articlesNumber: number;
 }
 
 const initialState: articlesProps = {
   loading: false,
   articles: [],
   error: "",
-  articlesNumber: 0,
 };
 
 export const fetchArticles = createAsyncThunk(
@@ -46,11 +44,7 @@ export const fetchArticles = createAsyncThunk(
 export const articlesSlice = createSlice({
   name: "articles",
   initialState,
-  reducers: {
-    setNumberOfArticles: (state, action: PayloadAction<number>) => {
-      state.articlesNumber = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchArticles.pending, (state) => {
       state.loading = true;
@@ -68,7 +62,7 @@ export const articlesSlice = createSlice({
   },
 });
 
-export const { setNumberOfArticles } = articlesSlice.actions;
+export const {} = articlesSlice.actions;
 export default articlesSlice.reducer;
 
 export const selectArticles = (state: RootState) => state.articles.articles;

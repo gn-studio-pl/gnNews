@@ -7,7 +7,7 @@ import "./header.css";
 import { NewsLayoutBtn } from "./newsLayout/NewsLayoutBtn";
 import { Popup } from "../utils/popup/Popup";
 import { SideNavIcon } from "./sideNavIcon/SideNavIcon";
-import { setNumberOfArticles } from "../../redux/features/articles";
+import { fetchArticles } from "../../redux/features/articles";
 
 interface LngProps {
   nativeName: string;
@@ -28,7 +28,7 @@ export const Header = () => {
     <header className="header">
       <div className="logo-sidebar">
         <SideNavIcon />
-        <Link onClick={() => dispatch(setNumberOfArticles(0))} to="/">
+        <Link onClick={() => dispatch(fetchArticles("none"))} to="/">
           <h1>
             gn<span>News</span>
           </h1>

@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useAppSelector } from "../../../redux/app/hooks";
-import { Article } from "../Main";
-import { NewsModal } from "./newsModal/NewsModal";
-import "./card.css";
 import { useTranslation } from "react-i18next";
+import { useAppSelector } from "../../../redux/app/hooks";
+import { Article } from "../../../redux/features/articles";
+
+import "./card.css";
+import { NewsModal } from "./newsModal/NewsModal";
 
 interface CardProps {
   article: Article;

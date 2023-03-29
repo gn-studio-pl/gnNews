@@ -4,4 +4,6 @@ export type Article = {
   author: string;
   urlToImage: string | null;
   publishedAt: string;
+  description: string;
+  source: { name: string };
 };

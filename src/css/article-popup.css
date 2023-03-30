@@ -1,0 +1,30 @@
+.article-popup-box__title {
+  font-size: 4vh;
+}
+.article-popup-box__description {
+  margin: 2.5vh 0;
+  font-size: 2vh;
+}
+.article-popup-box__sign {
+  align-self: end;
+  font-size: 2vh;
+  font-weight: bold;
+  color: #7E61FC;
+}
+.article-popup-box__url {
+  margin: 2.5vh 0;
+  font-size: 1.5vh;
+  color: #000;
+  font-style: italic;
+  text-decoration: none;
+  line-break: anywhere;
+}
+.article-popup-box__url:hover {
+  color: #7E61FC;
+}
+
+@media (max-width: 500px) {
+  .article-popup-box__title {
+    font-size: 3vh;
+  }
+}/*# sourceMappingURL=article-popup.css.map */

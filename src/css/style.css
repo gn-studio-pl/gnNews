@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.btn-general {
+  all: unset;
+  position: relative;
+  padding: 1.5vh 2vh;
+  font-size: 2vh;
+  border-radius: 0.8vh;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.14), 0px 2px 6px rgba(0, 0, 0, 0.14), 0px 0px 1px rgba(0, 0, 0, 0.14);
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.btn-general::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #24ebf9;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn-general:hover::before {
+  height: 0;
+  padding: 0;
+}
+.btn-general:active {
+  transform: scale(0.9);
+}
+
+.btn-general__bg::before {
+  top: 0;
+  height: 190%;
+  border-radius: 0 0 50% 50%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 6vh;
+  width: 100%;
+}
+.main-content__nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 6vh;
+  max-width: 20%;
+  width: 100%;
+}
+.main-content__nav a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+  padding: 0.2vw;
+  font-size: 2vh;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+.main-content__nav a:visited {
+  color: #000;
+}
+.main-content__nav a:hover {
+  transform: translateX(1vh);
+  color: #7e61fc;
+}
+.main-content__nav a.active {
+  color: #7e61fc;
+  transform: translateX(1vh);
+}
+.main-content__nav img {
+  margin-right: 1vh;
+  max-width: 5vh;
+  border-radius: 0.8vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-content__articles {
+  max-width: 80%;
+  width: 100%;
+}
+
+.content-text {
+  font-size: 2vh;
+}
+
+@media (max-width: 767px) {
+  .btn-general {
+    font-size: 1.7vh;
+  }
+  .main-content {
+    padding: 3vh;
+  }
+  .main-content__nav a {
+    font-size: 1.7vh;
+  }
+}
+@media (max-width: 500px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content__nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14vh, 1fr));
+    gap: 1vh;
+    margin-right: 0;
+    margin-bottom: 2vh;
+    max-width: 100%;
+  }
+  .main-content__nav a:first-child {
+    display: none;
+  }
+  .main-content__articles {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

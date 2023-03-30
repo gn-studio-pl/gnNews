@@ -1,0 +1,17 @@
+{
+    "title": "Check what's going on in different parts of the World",
+    "choose_country": "Select the country you are interested in from the list on the left side and check the latest articles",
+    "btn_popup_open": "take a look at popup",
+    "btn_close": "close",
+    "popup_text_strong": "It worked! ",
+    "popup_text": "The task was a real test of my skills. However, the biggest challenge I think was to use Redux, because I had to learn it quickly to can do this application ;)",
+    "current_time" : "Current time:",
+    "articles_number": "Number of articles:",
+    "created_by": "created by:",
+    "france": "France",
+    "italy": "Italy",
+    "malaysia": "Malaysia",
+    "singapore": "Singapore",
+    "usa": "USA",
+    "canada": "Canada"
+} 

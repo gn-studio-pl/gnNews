@@ -1,10 +1,16 @@
 import React from 'react';
 
 
-class ListNewsContainer extends React.Component{
+export class ListNewsContainer extends React.Component{
 
-    constructor(props){
+    constructor(props: any){
         super(props);
         this.state = {news: props.news}
+    }
+
+    render(): React.ReactNode {  
+        return (
+            <></>
+        );
     }
 }

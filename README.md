@@ -1,33 +1,24 @@
-# gnNews - gnStudio React.js developer challenge
+## News World!
 
-Witaj, jeżeli znalazłeś się w tym miejscu to najprawdopodobniej chcesz dołączyć do niesamowitego teamu tworzącego rozwiązania szyte na miarę i chcesz w końcu realizować projekty, które nie będą nudne, będą sprawiały Ci frajdę i będą napawały Cię dumą kiedy tylko o nich pomyślisz.
+NewsApi dosen't allow fetch data from browser, only locally.</br>
+Here is some screenshot from application: 
 
-Cóż, projekty są różne, więc może tak właśnie być, a może być zupełnie odwrotnie 😉 Możemy Ci jedynie zagwarantować, że nie będziesz się nudzić.
+#### Desktop
+<div>
+    <img src="https://user-images.githubusercontent.com/59477908/228759362-c4abf29b-d194-4807-92c2-4998518cfe65.png" height="200">
+    &nbsp;&nbsp;&nbsp;
+    <img src="https://user-images.githubusercontent.com/59477908/228759373-776bc328-f445-400c-837e-a237085396a3.png" height="200">
+    <img src="https://user-images.githubusercontent.com/59477908/228759389-a295c5c8-a873-4780-a36b-e7920f43395b.png" height="200">
+</div>
 
-## O zadaniu
+### Tablet
+  <img src="https://user-images.githubusercontent.com/59477908/228759395-e7f8e245-bd46-4342-a11e-a3509da8558e.png" height="300">
 
-Abyśmy mogli bliżej poznać Twoje umiejętności techniczne, stopień zaangażowania oraz sposób myślenia, przygotowaliśmy dla Ciebie zadanie polegające na stworzeniu prostej aplikacji będącej "agregatorem newsów" szumnie nazwanej przez nas roboczo **gnNews**.
-
-To na czym nam zależy to przede wszystkim czytelny kod, działająca aplikacja i UI, który nie wygląda jak konar ciosany tępym scyzorykiem (hint: pamiętaj o RWD, ale ciii, nie mów nikomu, że Ci podpowiedziałem 😉)
-
-## Następne kroki
-
-- wykonaj forka tego repozytorium jako prywatne repo
-- postępuj z instrukcjami zawartymi w [opis-zadania.md](./opis-zadania.md)
-- rozwiąż zadanie najlepiej jak potrafisz
-- dodaj użytkownika [gn-studio-pl](https://github.com/gn-studio-pl) do repozytorium
-
-## Uwagi
-
-- aplikację wykonaj w oparciu o React.js, wykorzystanie TypeScript'u bedzie mile widziane i dodatkowo punktowane
-- wykorzystaj nastepujace biblioteki: Redux toolkit, react-test-lib. Może odbierzesz to jako wychodzenie z armatą na muchy ale korzystamy z nich w naszych projektach i chcemy wiedziec czy czujesz się w nich dobrze
-- nie musisz tworzyć całego UI samemu, możesz skorzystać z dowolnej biblioteki UI
-- nie ma tutaj limitu czasu (poza wyznaczonym deadlinem), ale zalecamy, abyś nie spędzał nad tym zadaniem więcej jak 12 godzin
-- staraj się napisać swój kod najlepiej jak potrafisz
-- otestowanie przynajmniej części aplikacji mile widziane 😉
-
-## Pytania?
-
-Jeżeli masz jakiekolwiek pytania co do wykonywanego zadania, bądź coś nie jest dla Ciebie jasne, albo masz trudności na którymś etapie, nie krępuj się - dzwoń, pisz - wyjaśnimy (chyba 😛)
-
-## Powodzenia!
+#### Mobile
+<div>
+  <img src="https://user-images.githubusercontent.com/59477908/228759382-1bb1836e-4ade-434e-846d-6659b33d3be2.png" height="300">
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/59477908/228759376-fdc6c035-d0d9-4fae-8a76-aa70b557cc8a.png" height="300">
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/59477908/228759399-57255375-29a0-49a8-be42-464c3ff6dbe5.png" height="300">
+</div>

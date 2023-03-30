@@ -4,8 +4,8 @@ import "../../styles/components/UI/logo_style.scss";
 export const Logo = () => {
   const navigate = useNavigate();
   return (
-    <button className="logo" onClick={() => navigate("/")}>
+    <h1 className="logo" onClick={() => navigate("/")}>
       gn<span>News</span>
-    </button>
+    </h1>
   );
 };

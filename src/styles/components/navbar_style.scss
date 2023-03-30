@@ -3,9 +3,10 @@
 nav {
   width: 100%;
   min-height: $nav-height;
-  display: flex;
   border-bottom: 1px solid $c-grey;
   background-color: $c-white;
+
+  display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -16,5 +17,17 @@ nav {
     display: flex;
     align-items: center;
     gap: 30px;
+  }
+
+  @media (max-width: 700px) {
+    grid-row: 1;
+    border: none;
+    position: fixed;
+    padding: 0 20px;
+
+    button {
+      display: none;
+    }
+    // color: white;
   }
 }

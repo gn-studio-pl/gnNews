@@ -15,7 +15,7 @@ export const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>
+      <p className="footer_author">
         created by <a href="https://github.com/annakoruc">annakoruc</a> |
         recruitment task <a href="https://www.gnstudio.dev/">gnStudio</a>
       </p>

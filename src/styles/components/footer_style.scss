@@ -12,7 +12,7 @@
   position: sticky;
   bottom: 0;
 
-  p {
+  .footer_author {
     font-size: 14px;
   }
 
@@ -29,6 +29,17 @@
     .clock {
       font-size: 28px;
       color: $c-purple;
+    }
+  }
+
+  @media (max-width: 700px) {
+    grid-row: 3;
+    justify-content: center;
+    position: fixed;
+    border: none;
+
+    .footer_author {
+      display: none;
     }
   }
 }

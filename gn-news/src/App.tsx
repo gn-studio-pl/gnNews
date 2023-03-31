@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Header } from './components/Header'
 import { SideMenu } from './components/SideMenu';
@@ -10,14 +9,17 @@ import { formatDate } from './common/date';
 import { INews } from './models/INews';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { Footer } from './components/Footer';
+import { ProblemPopup } from './components/ProblemPopup'
 
 
-class App extends React.Component<any, {news: INews[], loading: boolean}> {
+class App extends React.Component<any, {news: INews[],  problemPopup: boolean}> {
 
   constructor(props: any){
     super(props);
-    this.state = { news: [], loading: true}
+    this.state = { news: [], problemPopup: false}
     this.getNews = this.getNews.bind(this);
+    this.openProblemPopup = this.openProblemPopup.bind(this);
+    this.closeProblemPopup =  this.closeProblemPopup.bind(this);
   }
 
   componentDidMount(): void {
@@ -37,11 +39,19 @@ class App extends React.Component<any, {news: INews[], loading: boolean}> {
         description: article.description,
         thumbnailUrl: article.urlToImage
       }));
-      this.setState({news: news, loading: false});
+      this.setState({news: news});
       console.log(this.state.news);
     } catch (err){
       console.log(err);
     }
+  }
+
+  openProblemPopup(){
+    this.setState({problemPopup: true})
+  }
+
+  closeProblemPopup() {
+    this.setState({problemPopup: false});
   }
 
   render(){
@@ -49,7 +59,7 @@ class App extends React.Component<any, {news: INews[], loading: boolean}> {
       <BrowserRouter>
         <div className='app-container'>
           <div className="app">    
-            <Header navigateHome={() => this.getNews('pl')}/>
+            <Header navigateHome={() => this.getNews('pl')} openProblemPopup={this.openProblemPopup}/>
             <div className="app-middle-container">
               <SideMenu countries={countries} getNews={this.getNews}/>
               <Routes>
@@ -57,6 +67,7 @@ class App extends React.Component<any, {news: INews[], loading: boolean}> {
               </Routes>
             </div>
             <Footer numberOfNews={this.state.news.length}/>
+            <ProblemPopup trigger={this.state.problemPopup} close={this.closeProblemPopup}/>
           </div>
         </div> 
       </BrowserRouter> 

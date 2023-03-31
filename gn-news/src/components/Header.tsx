@@ -4,9 +4,9 @@ import { changeViewAction } from "../store/actions/changeViewAction";
 import { store } from "../store/store";
 import { Button } from "./Button";
 
-export class Header extends React.Component<{navigateHome: () => void}, {view: string}> {
+export class Header extends React.Component<{navigateHome: () => void, openProblemPopup: () => void}, {view: string}> {
 
-    constructor(props: {navigateHome: () => void}){
+    constructor(props: {navigateHome: () => void, openProblemPopup: () => void}){
         super(props);
         this.state = {view: 'list'}
         this.handleChangeView = this.handleChangeView.bind(this);
@@ -28,7 +28,7 @@ export class Header extends React.Component<{navigateHome: () => void}, {view: s
                 <Link className="header-title" to="/"><span  onClick={(e) => this.props.navigateHome()}>gnNews</span></Link>
                 <div className="header-buttons-container">
                     <Button onClick={this.handleChangeView} label="View"/>
-                    <Button onClick={() => {}} label="Problems"/>
+                    <Button onClick={this.props.openProblemPopup} label="Problems"/>
                 </div>
             </header>
         )

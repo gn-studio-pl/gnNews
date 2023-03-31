@@ -196,4 +196,27 @@ footer {
   
 }
 
+.problem-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem-popup-inner{
+  position: relative;
+  background-color: white;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 20px;
+
+}
 

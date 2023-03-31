@@ -1,0 +1,16 @@
+{
+  "homePage": {
+    "hi": "Hi :D",
+    "instruction": "Click on a country to view the news."
+  },
+  "footer": {
+    "articles": "Articles:"
+  },
+  "navigation": {
+    "popup": {
+      "difficulty": "The only difficulty in creating this task was the lack of photos from the API so I have implemented a function to adds random photos where the original photo does not exist in order to 'UI that didn't look like a bough carved with a dull penknife'. :D",
+      "fun": "I literally had the most fun creating this whole app because I love programming and I get into flow every time I start coding. ;D",
+      "ending": "Seeing how many recruitment tasks you have to check, I thought I had put a meme for you to cheer yourself up. Have a nice day bro ;D"
+    }
+  }
+}

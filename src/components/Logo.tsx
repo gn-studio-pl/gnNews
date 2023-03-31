@@ -1,8 +1,19 @@
-const Logo = () => {
+import { Link } from "react-router-dom";
+import Title from "./Title";
+import Wrapper from "./Wrapper";
+
+const Logo = (): React.ReactElement => {
   return (
-    <div>
-      <span></span>
-    </div>
+    <Wrapper
+      style={{
+        zIndex: 5,
+        cursor: "pointer",
+      }}
+    >
+      <Link to="/">
+        <Title idText="header.gnNews" type="H1" />
+      </Link>
+    </Wrapper>
   );
 };
 

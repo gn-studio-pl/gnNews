@@ -1,0 +1,36 @@
+{
+  "header.gnNews": "gnNews",
+
+  "layout.list": "List",
+  "layout.tiles": "Tiles",
+
+  "popup.secret.header-first": "It gave me the greatest difficulty",
+  "popup.secret.content-first": "To be honest, I can't say what was the most difficult thing for me when building the application. In fact, I ran into some errors every now and then, but as a result everything works. At first I had trouble finding my way around using styled components. I spent a lot of time modeling components and at the same time on their responsiveness.",
+  "popup.secret.header-second": "I had the most fun",
+  "popup.secret.content-second": "Especially creating a translator, because it was my first time using a library containing the \"internalization\" methodology. And by the way, I found out that it is a very simple matter :) Also, one of the greatest satisfactions gave me the development of lazy loading for loading the list of articles. Nothing like a successful UX :)",
+
+  "navigation.title": "News for",
+  "navigation.navbar.argentina": "Argentina",
+  "navigation.navbar.poland": "Poland",
+  "navigation.navbar.spain": "Spain",
+  "navigation.navbar.greece": "Greece",
+  "navigation.navbar.newZealand": "New Zealand",
+  "navigation.navbar.brazil": "Brazil",
+  "navigation.navbar.germany": "Germany",
+  "navigation.navbar.norway": "Norway",
+  "navigation.navbar.netherlands": "Netherlands",
+  "navigation.navbar.japan": "Japan",
+  "navigation.navbar.egypt": "Egypt",
+  "navigation.navbar.russia": "Russia",
+  "navigation.navbar.france": "France",
+  "navigation.navbar.colombia": "Colombia",
+  "navigation.navbar.canada": "Canada",
+  "navigation.navbar.china": "China",
+
+  "main.title": "Added",
+  "main.loader": "Loading ...",
+
+  "main.article.popup.link": "Click me to go to the source",
+
+  "footer.article-info": "articles on the site"
+}

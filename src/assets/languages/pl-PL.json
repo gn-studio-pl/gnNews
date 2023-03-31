@@ -1,0 +1,36 @@
+{
+  "header.gnNews": "gnNews",
+
+  "layout.list": "Lista",
+  "layout.tiles": "Kafelki",
+
+  "popup.secret.header-first": "Największą trudność sprawiło mi",
+  "popup.secret.content-first": "Będąc szczerym to nie jestem w stanie określić co sprawiło mi największą trudność podczas budowania aplikacji. Tak naprawdę co chwilę napotykałem jakieś błędy ale w rezultacie wszystko działa. Z początku miałem problem w odnalezieniu się przy używaniu styled components. Dużą część czasu poświęciłem na modelowanie componentów i zarazem nad ich responsywnością.",
+  "popup.secret.header-second": "Największą frajdę sprawiło mi",
+  "popup.secret.content-second": "W szczególności tworzenie translatora, ponieważ był to mój pierwszy raz kiedy korzystałem bilbioteki zawierającej metodyke \"internalization\". A przy okazji dowiedziałem się że jest to bardzo prosta sprawa :) Również jedną z większych satysfakcji sprawiło mi opracowanie lazy loading'u dla wczytywania listy artykułów. Nie ma to jak udany UX :)",
+
+  "navigation.title": "Newsy dla",
+  "navigation.navbar.argentina": "Argentyna",
+  "navigation.navbar.poland": "Polska",
+  "navigation.navbar.spain": "Hiszpania",
+  "navigation.navbar.greece": "Grecja",
+  "navigation.navbar.newZealand": "Nowa Zelandia",
+  "navigation.navbar.brazil": "Brazylia",
+  "navigation.navbar.germany": "Niemcy",
+  "navigation.navbar.norway": "Norwegia",
+  "navigation.navbar.netherlands": "Holandia",
+  "navigation.navbar.japan": "Japonia",
+  "navigation.navbar.egypt": "Egipt",
+  "navigation.navbar.russia": "Rosja",
+  "navigation.navbar.france": "Francja",
+  "navigation.navbar.colombia": "Kolumbia",
+  "navigation.navbar.canada": "Kanada",
+  "navigation.navbar.china": "Chiny",
+
+  "main.title": "Dodane",
+  "main.loader": "Ładowanie ...",
+
+  "main.article.popup.link": "Kliknij mnie, aby przejść do źródła",
+
+  "footer.article-info": "artykuły na stronie"
+}

@@ -1,8 +1,13 @@
-const Header = () => {
+import Logo from "../components/Logo";
+import Options from "../components/Options";
+import { StyledHeader } from "../components/styles/Header.styled";
+
+const Header = (): React.ReactElement => {
   return (
-    <div>
-      <span></span>
-    </div>
+    <StyledHeader>
+      <Logo />
+      <Options />
+    </StyledHeader>
   );
 };
 

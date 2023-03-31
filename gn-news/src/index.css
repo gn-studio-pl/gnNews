@@ -134,6 +134,11 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer
+}
+
+.list-news{
+  cursor: pointer;
 }
 
 footer {
@@ -196,7 +201,7 @@ footer {
   
 }
 
-.problem-popup {
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -219,4 +224,28 @@ footer {
   font-size: 20px;
 
 }
+
+.news-popup-inner{
+  position: relative;
+  background-color: white;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.news-popup-link {
+  max-width: 600px;
+  height: auto;
+  text-overflow: clip;
+}
+
+
+
+
 

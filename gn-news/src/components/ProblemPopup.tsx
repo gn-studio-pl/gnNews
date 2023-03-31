@@ -2,7 +2,7 @@ import React from "react";
 
 export function ProblemPopup(props: any){
     return (props.trigger) ? (
-        <div className="problem-popup">
+        <div className="popup">
             <div className="problem-popup-inner">
                 Największe problemy: 
                 <p>-Zastanawiałem się, czy wczytane newsy również przechowywać za pomocą reduxa, ale wybrałem inne rozwiązanie.</p>

@@ -6,9 +6,9 @@ import { WindowsNewsContainer } from './WindowsNewsContainer';
 import { connect } from 'react-redux';
 
 
-class ContentArea extends React.Component<{news: INews[], view: string}> {
+class ContentArea extends React.Component<{news: INews[], view: string, setPopupNews: (title: string, sourceName: string, url: string, author: string, publishedAt: string) => void, openNewsPopup: () => void}> {
 
-    constructor(props: {news: INews[], view: string}){
+    constructor(props: {news: INews[], view: string, setPopupNews: (title: string, sourceName: string, url: string, author: string, publishedAt: string) => void, openNewsPopup: () => void}){
         super(props);
         this.render = this.render.bind(this);
         store.subscribe(this.render);
@@ -19,7 +19,7 @@ class ContentArea extends React.Component<{news: INews[], view: string}> {
     render(): React.ReactNode {
         return (
             <div className='content-area'>
-                {this.props.view === 'list' ? <ListNewsContainer news={this.props.news}/> : <WindowsNewsContainer news={this.props.news}/>}
+                {this.props.view === 'list' ? <ListNewsContainer news={this.props.news} setPopupNews={this.props.setPopupNews} openNewsPopup={this.props.openNewsPopup}/> : <WindowsNewsContainer news={this.props.news} setPopupNews={this.props.setPopupNews} openNewsPopup={this.props.openNewsPopup}/>}
             </div>
         )
     }

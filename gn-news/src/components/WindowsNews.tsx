@@ -3,9 +3,9 @@ import { INews } from "../models/INews";
 import { IWindowsNews } from "../models/IWindowsNews";
 
 
-export class WindowsNews extends React.Component<{title: string, sourceName: string, publishedAt: string, thumbnailUrl: string | null, description: string | null}>{
+export class WindowsNews extends React.Component<{title: string, sourceName: string, publishedAt: string, thumbnailUrl: string | null, description: string | null, onClick: () => void}>{
 
-    constructor(props: {title: string, sourceName: string, publishedAt: string, thumbnailUrl: string | null, description: string | null}){
+    constructor(props: {title: string, sourceName: string, publishedAt: string, thumbnailUrl: string | null, description: string | null, onClick: () => void}){
         super(props);
   
     }
@@ -18,7 +18,7 @@ export class WindowsNews extends React.Component<{title: string, sourceName: str
         }
 
         return (
-            <div className="windows-news">
+            <div className="windows-news" onClick={this.props.onClick}>
                 {imgElement}
                 <div className="windows-news-title">{this.props.title}</div>
                 <div className="windows-news-source">source: {this.props.sourceName}</div>

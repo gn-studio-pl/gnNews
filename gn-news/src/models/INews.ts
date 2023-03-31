@@ -4,6 +4,6 @@ export interface INews {
     sourceUrl: string,
     author: string,
     publishedAt: string,
-    description?: string | null,
-    thumbnailUrl?: string | null
+    description: string | null,
+    thumbnailUrl: string | null
 }

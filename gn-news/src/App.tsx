@@ -4,25 +4,30 @@ import './App.css';
 import { Header } from './components/Header'
 import { SideMenu } from './components/SideMenu';
 import { countries } from './constants/countries'
-import { ContentArea } from './components/ContentArea';
-import { api } from './common/api'
+import ContentArea  from './components/ContentArea';
+import { api } from './common/api';
 import { formatDate } from './common/date';
-import { INews } from './models/INews'
+import { INews } from './models/INews';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Footer } from './components/Footer';
 
-class App extends React.Component <any, {news: INews[], numberOfNews: number, loading: boolean}>{
+
+class App extends React.Component<any, {news: INews[], loading: boolean}> {
 
   constructor(props: any){
     super(props);
-    this.state = {news: [], numberOfNews: 0, loading: true}
+    this.state = { news: [], loading: true}
+    this.getNews = this.getNews.bind(this);
   }
 
-  componentDidMount() {
-    this.getNews();
+  componentDidMount(): void {
+    this.getNews('pl');
   }
 
-  async getNews(country?: string){
-    try{
-      let response = await api.getNews(country)
+  async getNews(country: string) {
+    console.log('get news executing');
+    try {
+      let response = await api.getNews(country);
       let news: INews[] = response.articles.map((article) => ({
         title: article.title,
         sourceName: article.source.name,
@@ -31,24 +36,30 @@ class App extends React.Component <any, {news: INews[], numberOfNews: number, lo
         publishedAt: formatDate(article.publishedAt),
         description: article.description,
         thumbnailUrl: article.urlToImage
-      }))
-      this.setState({news: news, numberOfNews: response.totalResults, loading: false})
-    } catch {
-      
+      }));
+      this.setState({news: news, loading: false});
+      console.log(this.state.news);
+    } catch (err){
+      console.log(err);
     }
   }
 
   render(){
     return (
-      <div className='app-container'>
-        <div className="app">    
-          <Header/>
-          <div className="grid-row">
-            <SideMenu countries={countries} getNews={this.getNews}/>
-            <ContentArea news={this.state.news}/>
+      <BrowserRouter>
+        <div className='app-container'>
+          <div className="app">    
+            <Header navigateHome={() => this.getNews('pl')}/>
+            <div className="app-middle-container">
+              <SideMenu countries={countries} getNews={this.getNews}/>
+              <Routes>
+                <Route path="*" element={<ContentArea news={this.state.news}/>}/>
+              </Routes>
+            </div>
+            <Footer numberOfNews={this.state.news.length}/>
           </div>
-        </div>
-      </div>
+        </div> 
+      </BrowserRouter> 
     );
   }
 }

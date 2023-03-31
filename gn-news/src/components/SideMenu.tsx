@@ -12,7 +12,7 @@ export class SideMenu extends React.Component<{countries: ICountry[], getNews: (
     render(): React.ReactNode {
         return (
             <ul className="side-menu">
-                {this.state.countries.map(country => <li><CountryOption countryName={country.countryName} imgSrc={country.imgSrc} shortName={country.shortName} onSelect={() => this.props.getNews(country.shortName)}/></li>)}
+                {this.state.countries.map(country => <li key={country.shortName}><CountryOption countryName={country.countryName} imgSrc={country.imgSrc} shortName={country.shortName} onSelect={this.props.getNews}/></li>)}
             </ul>
         )
     }

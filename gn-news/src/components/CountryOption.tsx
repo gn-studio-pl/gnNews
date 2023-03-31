@@ -1,6 +1,7 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
 import { ICountry } from '../models/ICountry';
+import { Link } from 'react-router-dom';
 
 export class CountryOption extends React.Component<{countryName: string, imgSrc: string, shortName: string, onSelect: (country: string) => void}> {
 
@@ -17,7 +18,7 @@ export class CountryOption extends React.Component<{countryName: string, imgSrc:
         return (
             <div className="country-option">
                 <img className="flag" width="80px" height="40px" src={this.getImgSrcLocation()} alt={this.props.countryName}></img>
-                <span className="country-option-country-name" onClick={(e) => this.props.onSelect}>{this.props.countryName}</span>
+                <Link className="country-option-link" to={this.props.countryName}><span className="country-option-country-name" onClick={(e) => this.props.onSelect(this.props.shortName)}>{this.props.countryName}</span></Link>
             </div>
         )
     }

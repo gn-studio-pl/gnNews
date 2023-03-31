@@ -8,6 +8,8 @@ export class Clock extends React.Component {
     constructor(props: any){
         super(props);
         this.state = { date: new Date() }
+        this.tick = this.tick.bind(this);
+        setInterval(this.tick, 1000)
     }
 
     tick(): void{

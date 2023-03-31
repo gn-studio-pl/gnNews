@@ -6,3 +6,5 @@ import { changeViewReducer } from './reducers/changeViewReducer';
 
 
 export const store = configureStore({ reducer: changeViewReducer });
+
+

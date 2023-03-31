@@ -9,22 +9,22 @@ export const countries: ICountry[] = [
     {
         countryName: 'USA',
         imgSrc: 'us-flag',
-        shortName: 'pl'
+        shortName: 'us'
     },
     {
         countryName: 'United Kingdom',
-        imgSrc: 'uk-flag',
-        shortName: 'uk' 
+        imgSrc: 'gb-flag',
+        shortName: 'gb' 
     },
     {
         countryName: 'China',
-        imgSrc: 'ch-flag',
-        shortName: 'ch'
+        imgSrc: 'cn-flag',
+        shortName: 'cn'
     },
     {
         countryName: 'Germany',
-        imgSrc: 'gm-flag',
-        shortName: 'gm'
+        imgSrc: 'de-flag',
+        shortName: 'de'
     },
     {
         countryName: 'France',
@@ -43,13 +43,13 @@ export const countries: ICountry[] = [
     },
     {
         countryName: 'Japan',
-        imgSrc: 'ja-flag',
-        shortName: 'ja' 
+        imgSrc: 'jp-flag',
+        shortName: 'jp' 
     },
     {
         countryName: 'South Korea',
-        imgSrc: 'sk-flag',
-        shortName: 'sk' 
+        imgSrc: 'kr-flag',
+        shortName: 'kr' 
     },
     
 ]

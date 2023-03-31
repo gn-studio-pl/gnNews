@@ -1,0 +1,16 @@
+{
+  "homePage": {
+    "hi": "Cześć :D",
+    "instruction": "Kliknij w kraj, aby wyświetlić wiadomości."
+  },
+  "footer": {
+    "articles": "Artykuły:"
+  },
+  "navigation": {
+    "popup": {
+      "difficulty": "Jedyna trudność jaka pojawiła się na drodze tworzenia tego zadania, to brak zdjęć z API, więc zaimplementowałem funkcje dodającą losowe zdjęcia tam gdzie orygianalne zdjęcie nie istnieje, żeby 'UI, który nie wyglądał jak konar ciosany tępym scyzorykiem'. :D",
+      "fun": "Największą frajdę czerpałem dosłownie z tworzenia całej tej aplikacji, ponieważ uwielbiam programować i wpadam w stan flow za kadym razem gdy przysiadam do kodowania. ;D",
+      "ending": "Widząc ile masz zadań rekrutacyjnych do sprawdzenia, pomyślałem że wstawię mema dla Ciebie na poprawę humoru. Miłego dnia ;D"
+    }
+  }
+}

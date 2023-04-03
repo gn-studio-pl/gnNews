@@ -2,11 +2,12 @@ import { FormattedMessage } from "react-intl";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { useAppSelector } from "../../hooks/useAppSelector";
 import { AppDispatch } from "../../store";
-import { LayoutView, LayoutViewState } from "../../types/types";
+import { LayoutView } from "../../types/types";
 import IconLayout from "./components/IconLayout";
 import { StyledLayoutSwitch } from "./components/styles/LayoutSwitch.styled";
 import { StyledNameLayout } from "./components/styles/NameLayout.styled";
 import { changeLayout } from "./layoutViewSlice";
+import { LayoutViewState } from "../../types/interfaces";
 
 const LayoutSwitch = (): React.ReactElement => {
   const { layout } = useAppSelector<LayoutViewState>(

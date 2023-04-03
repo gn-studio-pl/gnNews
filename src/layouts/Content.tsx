@@ -15,17 +15,7 @@ const Content = (): React.ReactElement => {
       }}
     >
       <Routes>
-        <Route
-          path="/*"
-          element={
-            <>
-              <Articles />
-              <Routes>
-                <Route path="/article/:idArticle" element={<PopupArticle />} />
-              </Routes>
-            </>
-          }
-        ></Route>
+        <Route path="/*" element={<Articles />}></Route>
       </Routes>
     </Wrapper>
   );

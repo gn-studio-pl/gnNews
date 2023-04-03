@@ -21,6 +21,10 @@ export const GlobalStyles = createGlobalStyle`
       --grey:#686D72;
       --lighterGrey:#849CA9;
       --white:#EEF6FF;
+
+      --secondGrey:#ebeef2;
+      --red:#db3954;
+      --secondBlue:#3167a9;
     }
 `;
 

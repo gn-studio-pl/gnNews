@@ -32,5 +32,7 @@
 
   "main.article.popup.link": "Kliknij mnie, aby przejść do źródła",
 
-  "footer.article-info": "artykuły na stronie"
+  "footer.article-info": "artykuły na stronie",
+  "error.404": "Przepraszamy ale szukana strona nie została znaleziona...",
+  "error.redirect": "Wróć do strony głównej"
 }

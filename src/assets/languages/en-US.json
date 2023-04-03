@@ -32,5 +32,7 @@
 
   "main.article.popup.link": "Click me to go to the source",
 
-  "footer.article-info": "articles on the site"
+  "footer.article-info": "articles on the site",
+  "error.404": "We are sorry but the page you are looking for was not found...",
+  "error.redirect": "Go Back to Home"
 }

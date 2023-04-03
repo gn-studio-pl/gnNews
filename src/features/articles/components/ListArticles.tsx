@@ -11,6 +11,8 @@ import { isArrayInRange } from "../../../helpers/isArrayInRange";
 import LoadingListArticles from "./LoadingListArticles";
 import ErrorArticles from "./ErrorArticles";
 import { AppDispatch } from "../../../store";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
+import PopupArticle from "./PopupArticle";
 
 const ListArticles = (): React.ReactElement => {
   const { articles, totalResults, isLoading, error } = useAppSelector(
@@ -57,6 +59,11 @@ const ListArticles = (): React.ReactElement => {
           {isLoading ? <LoadingListArticles /> : null}
         </StyledWrapperListArticles>
       )}
+      <Routes>
+        <Route index element={<Outlet />} />
+        <Route path="/article" element={<PopupArticle />} />
+        <Route path="/*" element={<Navigate to="/Page-Not-Found" />} />
+      </Routes>
     </>
   );
 };

@@ -18,7 +18,7 @@ const Article = ({ article }: ArticleProps) => {
 
   const hadleClick = () => {
     dispatch(focuseArticle(article));
-    navigate(`/article/${title}`);
+    navigate(`/article`);
   };
 
   return (

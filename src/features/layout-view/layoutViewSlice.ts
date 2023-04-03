@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { LayoutView, LayoutViewState } from "../../types/types";
+import { LayoutView } from "../../types/types";
+import { LayoutViewState } from "../../types/interfaces";
 
 const initialState: LayoutViewState = {
   layout: "tiles",

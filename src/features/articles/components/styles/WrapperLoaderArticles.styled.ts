@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { device } from "../../../../styles/breakPoints";
-import { LayoutViewState } from "../../../../types/types";
+import { LayoutViewState } from "../../../../types/interfaces";
 
 export const StyledWrapperLoaderArticles = styled.div<LayoutViewState>`
   display: flex;

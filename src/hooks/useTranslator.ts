@@ -1,11 +1,11 @@
 import { useAppDispatch } from "./useAppDispatch";
 import { useAppSelector } from "./useAppSelector";
 import { changeLng } from "../features/translator/translatorSlice";
-import { TranslatorState } from "../types/types";
 
 import { messages } from "../config/translator.config";
 import { LOCALES } from "../config/translator.config";
 import { AppDispatch } from "../store";
+import { TranslatorState } from "../types/interfaces";
 
 const useTranslator = () => {
   const { locale } = useAppSelector<TranslatorState>(

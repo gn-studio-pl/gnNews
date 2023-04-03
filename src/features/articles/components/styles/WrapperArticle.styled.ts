@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { LayoutViewState } from "../../../../types/types";
+import { LayoutViewState } from "../../../../types/interfaces";
 
 export const StyledWrapperArticle = styled.div<LayoutViewState>`
   display: grid;

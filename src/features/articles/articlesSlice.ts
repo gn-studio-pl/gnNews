@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios, { AxiosError } from "axios";
+import { AxiosError } from "axios";
 import { locale } from "../../config/translator.config";
 import { delay } from "../../helpers/delay";
 import ArticlesService from "../../services/articlesService";
@@ -8,7 +8,8 @@ import {
   ArticlesErrorResponse,
   ArticlesSuccesResponse,
 } from "../../types/responses.types";
-import { Article, ArticlesQueryParams, ArticlesState } from "../../types/types";
+import { Article, ArticlesQueryParams } from "../../types/types";
+import { ArticlesState } from "../../types/interfaces";
 
 const initialState: ArticlesState = {
   articles: [],

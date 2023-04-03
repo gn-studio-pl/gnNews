@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { locale } from "../../config/translator.config";
-import { TranslatorState } from "../../types/types";
+import { TranslatorState } from "../../types/interfaces";
 
 const initialState: TranslatorState = {
   locale: locale,

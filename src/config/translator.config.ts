@@ -14,6 +14,7 @@ export const messages = {
 export let locale: string;
 
 let navigatorLocale: string | undefined =
+  localStorage.getItem("locale") ||
   (navigator.languages && navigator.languages[0]) ||
   navigator.language ||
   navigator.language;

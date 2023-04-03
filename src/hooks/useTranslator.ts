@@ -25,6 +25,8 @@ const useTranslator = () => {
         locale: LOCALES.ENGLISH,
       };
 
+    localStorage.setItem("locale", newState.locale);
+
     setLang(newState);
   };
 

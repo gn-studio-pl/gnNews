@@ -1,0 +1,55 @@
+.side-nav {
+  background-color: #454545;
+  position: absolute;
+  height: 85%;
+  left: 0;
+  top: 8%;
+  bottom: 7%;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  min-width: 250px;
+  display: block;
+}
+
+.side-nav-active {
+  background-color: #454545;
+  position: absolute;
+  height: 85%;
+  left: 0;
+  top: 8%;
+  bottom: 7%;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  min-width: 250px;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SIDENAV ICON */
+
+@media (max-width: 700px) {
+  .side-nav {
+    display: none;
+  }
+  .side-nav-active {
+    background-color: #454545cb;
+    position: absolute;
+    height: 78%;
+    left: 0;
+    padding-top: 2rem;
+    top: 12%;
+    bottom: 12%;
+    padding-top: 3.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    min-width: 250px;
+    display: block;
+  }
+}

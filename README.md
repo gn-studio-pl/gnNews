@@ -18,7 +18,7 @@ Application written in TypeScript, using the redux-toolkit to manage the state o
 </ul>
 
 ## Check on your own
-vekaltor.github.io/news-app/
+https://vekaltor.github.io/news-app/
 
 ## Setup
 To run this project, install it locally using npm:

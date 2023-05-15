@@ -1,6 +1,6 @@
 # News app
 
-An application that allows you to search for the latest news - from the selected country. It uses an external free API
+Application written in TypeScript, using the redux-toolkit to manage the state of the application, allowing you to search for the latest news - from the selected country. It uses an external free API
 
 ## Technologies:
 <p>Project is created with:</p>
@@ -18,7 +18,13 @@ An application that allows you to search for the latest news - from the selected
 </ul>
 
 ## Check on your own
-https://ravintola.toadres.pl
+https://vekaltor.github.io/news-app/
+
+![image](https://github.com/Vekaltor/news-app/assets/56607344/38afa552-3b95-4d6a-a00d-820f5b9ad8a9)
+
+
+![image](https://github.com/Vekaltor/news-app/assets/56607344/04e18382-a2b8-4cea-9f7b-45bcc46741f8)
+
 
 ## Setup
 To run this project, install it locally using npm:

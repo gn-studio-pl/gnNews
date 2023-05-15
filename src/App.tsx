@@ -4,6 +4,7 @@ import useTranslator from "./hooks/useTranslator";
 import GlobalStyles from "./styles/global";
 import PageNotFound from "./views/PageNotFound";
 import Home from "./views/Home";
+import { PRODUCTION_URL } from "./config/PRODUCTION_URL.config";
 
 function App() {
   const { locale, messages } = useTranslator();
@@ -11,7 +12,7 @@ function App() {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <GlobalStyles />
-      <Router>
+      <Router basename={PRODUCTION_URL}>
         <Routes>
           <Route path="/*" element={<Home />} />
           <Route path="/Page-Not-Found" element={<PageNotFound />} />

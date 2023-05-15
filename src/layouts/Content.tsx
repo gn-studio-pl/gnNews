@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
-import PopupArticle from "../features/articles/components/PopupArticle";
 import Articles from "../features/articles/Articles";
 
 const Content = (): React.ReactElement => {

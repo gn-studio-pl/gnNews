@@ -38,12 +38,16 @@ the application downloads new news and displays them successively below the curr
 
 
 ### - News per country
-  Thanks to react-router-dom, the user is able to move between news from different parts of the world (country)
+  Thanks to react-router-dom, the user is able to move between news from different parts of the world (country).
   
 ### - Internalization
-  The implemented intl library allows the user to change the language of the application (PL/EN to choose)
+  The implemented intl library allows the user to change the language of the application (PL/EN to choose).
 
 ### - Layout changer
-  The application allows you to change the way the news is displayed, tile or list design
+  The application allows you to change the way the news is displayed, tile or list design.
+ 
+### - POPUP
+  When you click on a (news) item, a pop-up opens with more information about that news item.
+The popup disables scrolling on the page.
   
 

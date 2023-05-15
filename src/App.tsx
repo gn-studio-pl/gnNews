@@ -12,6 +12,7 @@ function App() {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <GlobalStyles />
+
       <Router basename={PRODUCTION_URL}>
         <Routes>
           <Route path="/*" element={<Home />} />

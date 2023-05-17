@@ -2,7 +2,7 @@ import Title from "../../../components/Title";
 import { useAppSelector } from "../../../hooks/useAppSelector";
 import Article from "./Article";
 import { StyledWrapperListArticles } from "./styles/WrapperListArticles.styled";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { fetchNextArticles } from "../articlesSlice";
 import { isScrollOnBottom } from "../../../helpers/isScrollOnBottomPage";
@@ -17,7 +17,6 @@ import { PRODUCTION_URL } from "../../../config/PRODUCTION_URL.config";
 import ErrorAPI from "./ErrorAPI";
 
 const ListArticles = (): React.ReactElement => {
-  const [isFetch, setIsFetch] = useState(false);
   const { articles, totalResults, isLoading, error } = useAppSelector(
     (state) => state.articles
   );

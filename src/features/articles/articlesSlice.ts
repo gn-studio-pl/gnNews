@@ -103,14 +103,7 @@ export const getArticles = createAsyncThunk<
   //FAKE DELAY FOR LAZY LOADING
   await delay(3000, "");
 
-  let response: ArticlesSuccesResponse = await service
-    .getAllArticlesForCountry(params)
-    .catch((err: AxiosError) => {
-      const responseErr = err.response?.data as ArticlesErrorResponse;
-      throw thunkAPI.rejectWithValue(responseErr);
-    });
-  console.log(PRODUCTION_URL);
-  if (true) {
+  if (PRODUCTION_URL) {
     const { articles } = thunkAPI.getState().articles;
     const fakeResponse: ArticlesSuccesResponse = {
       status: data.status,
@@ -120,9 +113,15 @@ export const getArticles = createAsyncThunk<
         articles.length + params.pageSize!
       ),
     };
-    console.log(fakeResponse);
     return fakeResponse;
   }
+
+  let response: ArticlesSuccesResponse = await service
+    .getAllArticlesForCountry(params)
+    .catch((err: AxiosError) => {
+      const responseErr = err.response?.data as ArticlesErrorResponse;
+      throw thunkAPI.rejectWithValue(responseErr);
+    });
 
   return response;
 });
@@ -149,14 +148,7 @@ export const fetchNextArticles = createAsyncThunk<
   //FAKE DELAY FOR LAZY LOADING
   await delay(3000, "");
 
-  let response: ArticlesSuccesResponse = await service
-    .getAllArticlesForCountry(newParams)
-    .catch((err: AxiosError) => {
-      const responseErr = err.response?.data as ArticlesErrorResponse;
-      throw thunkAPI.rejectWithValue(responseErr);
-    });
-
-  if (true) {
+  if (PRODUCTION_URL) {
     const { articles } = thunkAPI.getState().articles;
     const fakeResponse: ArticlesSuccesResponse = {
       status: data.status,
@@ -166,13 +158,16 @@ export const fetchNextArticles = createAsyncThunk<
         articles.length + params.pageSize!
       ),
     };
-    console.log(
-      articles.length,
-      articles.length + params.pageSize!,
-      fakeResponse
-    );
     return fakeResponse;
   }
+
+  let response: ArticlesSuccesResponse = await service
+    .getAllArticlesForCountry(newParams)
+    .catch((err: AxiosError) => {
+      const responseErr = err.response?.data as ArticlesErrorResponse;
+      throw thunkAPI.rejectWithValue(responseErr);
+    });
+
   return response;
 });
 

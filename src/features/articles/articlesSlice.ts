@@ -109,8 +109,8 @@ export const getArticles = createAsyncThunk<
       const responseErr = err.response?.data as ArticlesErrorResponse;
       throw thunkAPI.rejectWithValue(responseErr);
     });
-
-  if (PRODUCTION_URL) {
+  console.log(PRODUCTION_URL);
+  if (true) {
     const { articles } = thunkAPI.getState().articles;
     const fakeResponse: ArticlesSuccesResponse = {
       status: data.status,
@@ -120,6 +120,7 @@ export const getArticles = createAsyncThunk<
         articles.length + params.pageSize!
       ),
     };
+    console.log(fakeResponse);
     return fakeResponse;
   }
 
@@ -155,10 +156,8 @@ export const fetchNextArticles = createAsyncThunk<
       throw thunkAPI.rejectWithValue(responseErr);
     });
 
-  if (PRODUCTION_URL) {
-    const {
-      articles: { articles, params },
-    } = thunkAPI.getState();
+  if (true) {
+    const { articles } = thunkAPI.getState().articles;
     const fakeResponse: ArticlesSuccesResponse = {
       status: data.status,
       totalResults: data.totalResults,
@@ -167,6 +166,11 @@ export const fetchNextArticles = createAsyncThunk<
         articles.length + params.pageSize!
       ),
     };
+    console.log(
+      articles.length,
+      articles.length + params.pageSize!,
+      fakeResponse
+    );
     return fakeResponse;
   }
   return response;

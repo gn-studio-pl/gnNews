@@ -2,6 +2,10 @@
 
 Application written in TypeScript, using the redux-toolkit to manage the state of the application, allowing you to search for the latest news - from the selected country. It uses an external free API
 
+!IMPORTANT!
+
+<b>The API only works with localhost. If you want to see a fully working version of the application, you need to download the resources and test it on your own localhost</b>
+
 ## Technologies:
 <p>Project is created with:</p>
 <ul>

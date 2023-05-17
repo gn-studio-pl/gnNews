@@ -10,6 +10,8 @@ import {
 } from "../../types/responses.types";
 import { Article, ArticlesQueryParams } from "../../types/types";
 import { ArticlesState } from "../../types/interfaces";
+import { PRODUCTION_URL } from "../../config/PRODUCTION_URL.config";
+import { data } from "../../constants/fakeArticles";
 
 const initialState: ArticlesState = {
   articles: [],
@@ -108,6 +110,19 @@ export const getArticles = createAsyncThunk<
       throw thunkAPI.rejectWithValue(responseErr);
     });
 
+  if (PRODUCTION_URL) {
+    const { articles } = thunkAPI.getState().articles;
+    const fakeResponse: ArticlesSuccesResponse = {
+      status: data.status,
+      totalResults: data.totalResults,
+      articles: data.articles.slice(
+        articles.length,
+        articles.length + params.pageSize!
+      ),
+    };
+    return fakeResponse;
+  }
+
   return response;
 });
 
@@ -140,6 +155,20 @@ export const fetchNextArticles = createAsyncThunk<
       throw thunkAPI.rejectWithValue(responseErr);
     });
 
+  if (PRODUCTION_URL) {
+    const {
+      articles: { articles, params },
+    } = thunkAPI.getState();
+    const fakeResponse: ArticlesSuccesResponse = {
+      status: data.status,
+      totalResults: data.totalResults,
+      articles: data.articles.slice(
+        articles.length,
+        articles.length + params.pageSize!
+      ),
+    };
+    return fakeResponse;
+  }
   return response;
 });
 

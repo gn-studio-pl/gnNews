@@ -13,6 +13,8 @@ import ErrorArticles from "./ErrorArticles";
 import { AppDispatch } from "../../../store";
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import PopupArticle from "./PopupArticle";
+import { PRODUCTION_URL } from "../../../config/PRODUCTION_URL.config";
+import ErrorAPI from "./ErrorAPI";
 
 const ListArticles = (): React.ReactElement => {
   const { articles, totalResults, isLoading, error } = useAppSelector(
@@ -51,6 +53,7 @@ const ListArticles = (): React.ReactElement => {
         idText="main.title"
         stylesBox={{ width: "100%", margin: "0 40px" }}
       />
+      {PRODUCTION_URL && <ErrorAPI />}
       {error?.status === "error" ? (
         <ErrorArticles />
       ) : (

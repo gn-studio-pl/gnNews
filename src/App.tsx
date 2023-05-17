@@ -9,6 +9,8 @@ import { PRODUCTION_URL } from "./config/PRODUCTION_URL.config";
 function App() {
   const { locale, messages } = useTranslator();
 
+  console.log(process.env);
+
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <GlobalStyles />

@@ -12,13 +12,16 @@ import { StyledWrapperArticle } from "./styles/WrapperArticle.styled";
 
 const Article = ({ article }: ArticleProps) => {
   const { layout } = useAppSelector((state) => state.layoutView);
+  const {
+    params: { country },
+  } = useAppSelector((state) => state.articles);
   const { publishedAt, source, title, urlToImage } = article;
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const hadleClick = () => {
     dispatch(focuseArticle(article));
-    navigate(`/article`);
+    navigate(`/${country}/article`);
   };
 
   return (

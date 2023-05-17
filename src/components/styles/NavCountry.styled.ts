@@ -22,6 +22,10 @@ export const StyledWrapperNavCountry = styled.div`
       margin-left: 20px;
     }
   }
+  &.active ${StyledNameCountry} {
+    color: var(--blue);
+    font-weight: 900;
+  }
 `;
 
 export const StyledFlag = styled.img`

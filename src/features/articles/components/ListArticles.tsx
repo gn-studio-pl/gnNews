@@ -63,8 +63,8 @@ const ListArticles = (): React.ReactElement => {
         </StyledWrapperListArticles>
       )}
       <Routes>
-        <Route index element={<Outlet />} />
-        <Route path="/article" element={<PopupArticle />} />
+        <Route path="/:country" element={<Outlet />} />
+        <Route path="/:country/article" element={<PopupArticle />} />
         <Route path="/*" element={<Navigate to="/Page-Not-Found" />} />
       </Routes>
     </>

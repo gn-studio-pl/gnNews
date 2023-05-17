@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { isEmptyArray } from "../../helpers/isEmptyArray";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
@@ -6,11 +7,14 @@ import { AppDispatch } from "../../store";
 import { getArticles } from "./articlesSlice";
 import ListArticles from "./components/ListArticles";
 import LoadingListArticles from "./components/LoadingListArticles";
+import { useNavigate } from "react-router-dom";
+import { navigatorLocale } from "../../config/translator.config";
 
 const Articles = (): React.ReactElement => {
   const { isLoading, params, articles } = useAppSelector(
     (state) => state.articles
   );
+  const navigate = useNavigate();
 
   const dispatch: AppDispatch = useAppDispatch();
 
@@ -19,8 +23,11 @@ const Articles = (): React.ReactElement => {
   };
 
   useEffect(() => {
+    navigate(`/${navigatorLocale}`);
+  }, []);
+
+  useEffect(() => {
     handleFetchArticles();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.country]);
 
   const isFirstFetched: boolean = isLoading && isEmptyArray(articles);
